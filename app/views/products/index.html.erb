@@ -1,0 +1,10 @@
+<h1>Products<h1>
+<div class="container">
+<% @products.each do |product| %>
+	<div class="row">
+		<%= image_tag product.image_url(:thumbnail), :width => 200, :height => 300%><br>
+		<%= product.name %><br>
+		<%= product.price %>
+	</div>
+<% end %>
+<div>
