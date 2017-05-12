@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dazy8mpa6
+  api_key: '196616588116484'
+  api_secret: 770Y6nYqVHQjqCHdqJRdq0z_bSQ
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dazy8mpa6
+  api_key: '196616588116484'
+  api_secret: 770Y6nYqVHQjqCHdqJRdq0z_bSQ
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dazy8mpa6
+  api_key: '196616588116484'
+  api_secret: 770Y6nYqVHQjqCHdqJRdq0z_bSQ
+  enhance_image_tag: true
+  static_image_support: false
