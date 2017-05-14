@@ -4,10 +4,10 @@ class StoresController < ApplicationController
 	end
 
 	def show
-		@store = Song.find(params[:id])
+		@store = Store.find(params[:id])
 	end
 	def new
-		@store = Song.new
+		@store = Store.new
 	end
 
 	def create
