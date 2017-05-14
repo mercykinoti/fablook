@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170512092726) do
+ActiveRecord::Schema.define(version: 20170513164922) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,14 @@ ActiveRecord::Schema.define(version: 20170512092726) do
     t.index ["username"], name: "index_admins_on_username", unique: true, using: :btree
   end
 
+  create_table "choices", force: :cascade do |t|
+    t.string   "answer"
+    t.integer  "style_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["style_id"], name: "index_choices_on_style_id", using: :btree
+  end
+
   create_table "products", force: :cascade do |t|
     t.string   "name"
     t.string   "image"
@@ -42,6 +50,7 @@ ActiveRecord::Schema.define(version: 20170512092726) do
     t.integer  "store_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "category"
     t.index ["store_id"], name: "index_products_on_store_id", using: :btree
   end
 
@@ -49,6 +58,13 @@ ActiveRecord::Schema.define(version: 20170512092726) do
     t.string   "name"
     t.string   "location"
     t.string   "website"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "logo"
+  end
+
+  create_table "styles", force: :cascade do |t|
+    t.string   "question"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -73,5 +89,6 @@ ActiveRecord::Schema.define(version: 20170512092726) do
     t.index ["username"], name: "index_users_on_username", unique: true, using: :btree
   end
 
+  add_foreign_key "choices", "styles"
   add_foreign_key "products", "stores"
 end

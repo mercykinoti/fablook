@@ -1,8 +1,15 @@
 @import "bootstrap";
-
+@import "social-share-button";
 @import "font-awesome";
   
 
-.container {
+.contain {
 	margin-left: 100px;
+}
+.gap {
+	margin-left: 30px;
+	margin-bottom: 30px;
+}
+.run {
+	border-bottom: 1px solid #eee;
 }
