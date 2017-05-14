@@ -1,0 +1,20 @@
+<p>
+  <strong>Question:</strong>
+  <%= @style.question %>
+</p>
+
+<% @style.choices.in_groups_of(3, false) do |group| %>
+  <div class = "row">
+    <% group.each do |choice| %>
+      <div class="col-md-4">
+          <%= choice.answer %><br>
+          <%= image_tag choice.image_url(:thumbnail), :width => 400, :height => 400 %>
+          <div class="row gap">
+          <button class="btn btn-primary">Yes</button>
+          <button class="btn btn-danger">No</button>
+          </div>
+      </div>
+    <% end %>
+  </div>
+
+<% end %>
