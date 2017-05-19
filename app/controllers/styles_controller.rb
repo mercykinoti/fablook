@@ -27,10 +27,6 @@ class StylesController < ApplicationController
 
   private
 
-  def category
-
-  end
-
   def style_params
     params.require(:style).permit(:question)
   end
