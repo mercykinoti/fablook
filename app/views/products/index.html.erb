@@ -1,12 +1,11 @@
 <h1>Products</h1>
 
-<%= link_to "store", stores_path, class: "btn btn-primary" %>
-
 <div class="container">
 	<% @products.in_groups_of(3, false) do |group| %>
 		<div class="row">
+			
 			<% group.each do |product| %>
-				<div class="card gap" style="width: 20rem;">
+				<div class="card gap" style="width: 20em;">
 				  <%= image_tag product.image_url(:thumbnail), :width => 315, :height => 400%>
 				  <div class="card-block">
 				    <h4 class="card-title"><%= product.name %></h4>
@@ -19,5 +18,3 @@
 		</div>
 	<% end %>
 </div>
-
-
