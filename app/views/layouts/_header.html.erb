@@ -14,13 +14,13 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse menu--shylock" id="nav-collapse">
 				  <ul class="nav navbar-nav menu__list center">
-					<li class="active menu__item menu__item--current"><a class="menu__link" href="Fablook.html">Fablook <span class="sr-only">(current)</span></a></li>
+					<li class="active menu__item menu__item--current"><a class="menu__link"><%= link_to 'Fablook', welcome_index_path %> <span class="sr-only">(current)</span></a></li>
 					<li class="dropdown menu__item">
 						<a href="" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sale <span class="caret"></span></a>
 							<ul class="dropdown-menu multi-column columns-3">
 								<div class="row">
 									<div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-										<a href=""><img src="../assets/img/fab2.jpg" alt=" "></a>
+										<a href=""><%= image_tag(image_path('fab2.jpg')) %></a>
 									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
@@ -75,7 +75,7 @@
 										</ul>
 									</div>
 									<div class="col-sm-6 multi-gd-img multi-gd-text ">
-										<a href=""><img src="../assets/img/fab2.jpg" alt=" "></a>
+										<a href=""><%= image_tag(image_path('fab2.jpg')) %></a>
 									</div>
 									<div class="clearfix"></div>
 								</div>
@@ -98,9 +98,16 @@
 		<ul>
 			<li><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Your world of fashion</li>
 			<li>
-				<form class="">
-					<input class="form-control" type="text" placeholder="Find style" id="search" name="search">
-				</form>
+        <!-- Searchbar -->
+        <%= form_tag root_path, :method => 'get', id: 'search-form' do %>
+            <p>
+              <%= text_field_tag :search, params[:search], placeholder: 'Search' %>
+              <%= submit_tag "Search", :name => nil %>
+            </p>
+        <% end %>
+
+        <pre><%= @products.to_json %></pre>
+        <pre><%= @products %></pre>
 			</li>
 			<li><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Fablook Socials</li>
 		</ul>
@@ -110,3 +117,6 @@
 <!-- //header-bot -->
 
 <!-- header-bot -->
+
+
+

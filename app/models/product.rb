@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
-  include Filterable
+  include PgSearch
+  multisearchable :against => [:name, :description, :category, :price]
 
   belongs_to :store
 
