@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
+
 	def index
-		@products = Product.all.order("created_at DESC")
+		@products = Product.filter(params.slice(:category, :price, :productname)).order("created_at DESC")
 	end
 	def show
 		@product = Product.find(params[:id])
