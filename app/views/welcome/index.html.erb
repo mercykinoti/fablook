@@ -1,49 +1,36 @@
-<div class="container">
-  <div id="myCarousel" class="carousel slider" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
+<!-- banner -->
+<div class="banner-grid">
+	<div id="visual">
+			<div class="slide-visual">
+				<!-- Slide Image Area (1000 x 424) -->
+				<ul class="slide-group">
+					<li>
+					  	<%= image_tag(image_path('baa1.jpg') , class: "img-responsive" )%>
+					</li>
+					<li>
+						<%= image_tag(image_path('baa2.jpg') , class: "img-responsive" )%>
+					<li>
+						<%= image_tag(image_path('baa3.jpg') , class: "img-responsive" )%>
+					</li>
+				</ul>
+				<div class="clearfix"></div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	
+	<script type="text/javascript">
+	//<![CDATA[
+		$(window).load(function() {
+			$('#visual').pignoseLayerSlider({
+				play    : '.btn-play',
+				pause   : '.btn-pause',
+				next    : '.btn-next',
+				prev    : '.btn-prev'
+			});
+		});
+	//]]>
+	</script>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-
-      <div class="item active">
-        <%= image_tag(image_path('fab2.jpg')) %>
-        <div class="carousel-caption">
-        	<h3>
-        		<a href="Fablook.html">Fablook</a>
-        	</h3>
-          <p>A world of fashion</p>
-        </div>
-      </div>
-
-      <div class="item">
-      <%= image_tag(image_path('fab2.jpg')) %>
-        <div class="carousel-caption">
-        	<h3>
-        		<a href="mystyle.html">Too much choice?</a>
-        	</h3>
-          <p>Discover the best products that Carouselest suit your style</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <%= image_tag(image_path('fab2.jpg')) %>
-        <div class="carousel-caption">
-        	<h3>
-        		<a href="sale.html">Looking for a sale?</a>
-        	</h3>
-          <p> Get notifications when the products you liked go on sale</p>
-        </div>
-      </div>
-
-    </div>
-
-
-  </div>
 </div>
 
 
@@ -51,371 +38,152 @@
 
 <!-- //banner -->
 <!-- content -->
+<!-- How it works -->
+<hr>
+<div class="container">
+	<div class="row flow">
+	<p class="text-center">Innovative styles for the creative generation</p>
+		<div class="coupons-grids text-center">
+			
+			<div class="col-md-4 coupons-gd">
+				<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+				<p>Create a fashion style</p>
+				<p>Fill a quiz detailing your style that will help us target you with tailored products</p>
+			</div>
+			<div class="col-md-4 coupons-gd">
+				<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+				<p>Receive tailored products</p>
+				<p>Escape choice overload by receiving products that suit your style</p>
+			</div>
+			<div class="col-md-4 coupons-gd">
+				<span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
+				<p>Get rewards and points</p>
+				<p>Get rewarded to shop.For any transaction through our platform, you gain points</p>
+			</div>
+		</div>				
+	</div>	
+</div>
+<hr>
+<!-- How it works -->
+<!-- offers -->
 
 <div class="new_arrivals">
 	<div class="container">
-		<h2 class="text-center">Shop by category</h2>
-		<p>Here's everything you need in your closet</p>
+		
+		<h4 class="text-center">Get latest offers and products that suit your style</h4>
+		<div class="new_grids">
+			<div class="col-md-4 new-gd-left">
+				<%= image_tag(image_path('wed1.jpg') , class: "img-responsive" )%>
+				<div class="wed-brandtwo simpleCart_shelfItem">
+					<h4>Latest Offers</h4>
+					<h4>Instant Updates</h4>
+				</div>
+			</div>
+			<div class="col-md-4 new-gd-middle">
+				<div class="new-levis">
+					<div class="mid-img">
+						<%= image_tag(image_path('levis1.png') , class: "img-responsive" )%>
+					</div>
+					<div class="mid-text">
+						<h4>up to 40% <span>off</span></h4>
+						<a class="hvr-outline-out button2" href="products.html">Shop now </a>
+					</div>
+
+					<div class="clearfix"></div>
+				</div>
+				<div class="new-levis">
+					<div class="mid-text">
+						<h4>up to 50% <span>off</span></h4>
+						<a class="hvr-outline-out button2" href="products.html">Shop now </a>
+					</div>
+					<div class="mid-img">
+						<%= image_tag(image_path('dig.jpg') , class: "img-responsive" )%>
+						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="col-md-4 new-gd-left">
+				<%= image_tag(image_path('wed2.jpg') , class: "img-responsive" )%>
+				<div class="wed-brandtwo simpleCart_shelfItem">
+					<h4>Top stores</h4>
+					<h4>around you</h4>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
 	</div>
 </div>
-<!-- //content -->
-
-<!-- content-bottom -->
-
-
-<div class="content-bottom">
-		<div class="col-sm-4 col-sm-offset-2 content-img-left text-center">
-			<div class="content-grid-effect slow-zoom vertical">
-				<div class="img-box"><%= image_tag(image_path('dress.jpg')) %></div>
-					<div class="info-box">
-						<div class="info-content simpleCart_shelfItem">
-									<h4>Dresses</h4>
-									<span class="separator"></span>
-									<a class="item_add hvr-outline-out button2" href="products.html">shop now</a>
-						</div>
-					</div>
-			</div>
-		</div>
-
-		<div class="col-sm-4 content-img-left text-center">
-			<div class="content-grid-effect slow-zoom vertical">
-				<div class="img-box"><%= image_tag(image_path('b19.jpeg')) %></div>
-					<div class="info-box">
-						<div class="info-content simpleCart_shelfItem">
-							<h4>Shoes</h4>
-							<span class="separator"></span>
-							<a class="item_add hvr-outline-out button2" href="products.html">shop now </a>
-						</div>
-					</div>
-			</div>
-		</div>
-
-	<div class="clearfix"></div>
-</div>
-<!-- //content-bottom -->
-<!-- product-nav -->
-
-<div class="product-easy">
+<!-- offers -->
+<!-- content -->
+<!--categories-->
+<hr>
+<div class="new_arrivals">
 	<div class="container">
+		<h4 class="text-center">Shop and browse by categories</h4>
+		
+<div class="electronics">
+	<div class="container">
+		<div class="col-md-8 electro-left text-center">
+			<div class="electro-img-left mask">
+				<div class="content-grid-effect slow-zoom vertical">
 
-	<!-- <script src="../assets/javascripts/easyResponsiveTabs.js" type="text/javascript"></script> --> -->
-		<script type="text/javascript">
-							$(document).ready(function () {
-								$('#horizontalTab').easyResponsiveTabs({
-									type: 'default', //Types: default, vertical, accordion
-									width: 'auto', //auto or any width like 600px
-									fit: true  // 100% fit in a container
-								});
-							});
-
-		</script>
-		<div class="sap_tabs">
-			<div id="horizontalTab">
-				<ul class="resp-tabs-list">
-					<li><span>Latest Designs</span></li>
-					<li><span>Special Offers</span></li>
-					<li><span>Collections</span></li>
-				</ul>
-				<div class="resp-tabs-container">
-					<h2 class="resp-accordion resp-tab-active"><span class="resp-arrow"></span>Latest Designs</h2>
-					<div class="container">
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<%= image_tag(image_path('a6.png')) %>
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="details.html">Air Tshirt Black </a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$129.99</span>
-									</div>
-									<a href="details.html" class="item_add single-item hvr-outline-out button2">View Details</a>
-								</div>
+					<div class="img-box"><%= image_tag(image_path('watch.jpg') , class: "img-responsive zoom-img" )%></div>
+						<div class="info-box">
+							<div class="info-content electro-text simpleCart_shelfItem">
+								<h4>Accesories</h4>
+								<span class="separator"></span>
+								<a class="item_add hvr-outline-out button2" href="products.html">Shop Now </a>
 							</div>
 						</div>
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<%= image_tag(image_path('a6.png')) %>
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="details.html">Air Tshirt Black </a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$129.99</span>
-									</div>
-									<a href="details.html" class="item_add single-item hvr-outline-out button2">View Details</a>
-								</div>
+				</div>
+			</div>
+			<div class="electro-img-btm-left mask">
+				<div class="content-grid-effect slow-zoom vertical">
+					<div class="img-box"><%= image_tag(image_path('e1.jpg') , class: "img-responsive zoom-img" )%></div>
+						<div class="info-box">
+							<div class="info-content electro-text simpleCart_shelfItem">
+								<h4>Shoes</h4>
+								<span class="separator"></span>
+								<a class="item_add hvr-outline-out button2" href="products.html">Shop Now </a>
 							</div>
 						</div>
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="../assets/img/a6.png" alt="">
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="details.html">Air Tshirt Black </a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$129.99</span>
-									</div>
-									<a href="details.html" class="item_add single-item hvr-outline-out button2">View Details</a>
-								</div>
+				</div>
+			</div>
+			<div class="electro-img-btm-right mask">
+				<div class="content-grid-effect slow-zoom vertical">
+					<div class="img-box"><%= image_tag(image_path('e2.jpg') , class: "img-responsive zoom-img" )%></div>
+						<div class="info-box">
+							<div class="info-content electro-text simpleCart_shelfItem">
+								<h4>Beauty</h4>
+								<span class="separator"></span>
+								<a class="item_add hvr-outline-out button2" href="products.html">Shop Now </a>
 							</div>
 						</div>
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="../assets/img/a6.png" alt="">
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="details.html">Air Tshirt Black </a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$129.99</span>
-									</div>
-									<a href="details.html" class="item_add single-item hvr-outline-out button2">View Details</a>
-								</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="col-md-4 electro-right text-center">
+			<div class="electro-img-rt mask">
+				<div class="content-grid-effect slow-zoom vertical">
+					<div class="img-box"><%= image_tag(image_path('e4.jpg') , class: "img-responsive zoom-img" )%></div>
+						<div class="info-box">
+							<div class="info-content electro-text simpleCart_shelfItem">
+								<h4>Clothes</h4>
+								<span class="separator"></span>
+								<a class="item_add hvr-outline-out button2" href="products.html">Shop Now </a>
 							</div>
 						</div>
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="../assets/img/a6.png" alt="">
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="details.html">Air Tshirt Black </a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$129.99</span>
-									</div>
-									<a href="details.html" class="item_add single-item hvr-outline-out button2">View Details</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="../assets/img/a6.png" alt="">
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="details.html">Air Tshirt Black </a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$129.99</span>
-									</div>
-									<a href="details.html" class="item_add single-item hvr-outline-out button2">View Details</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="../assets/img/a6.png" alt="">
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="details.html">Air Tshirt Black </a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$129.99</span>
-									</div>
-									<a href="details.html" class="item_add single-item hvr-outline-out button2">View Details</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="../assets/img/a6.png" alt="">
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="details.html">Air Tshirt Black </a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$129.99</span>
-									</div>
-									<a href="details.html" class="item_add single-item hvr-outline-out button2">View Details</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<h2 class="resp-accordion" role="tab" aria-controls="tab_item-1"><span class="resp-arrow"></span>Special Offers</h2><div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
-					</div>
-					<h2 class="resp-accordion" role="tab" aria-controls="tab_item-2"><span class="resp-arrow"></span>Collections</h2><div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="../assets/img/a6.png" alt="">
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="details.html">Air Tshirt Black </a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$129.99</span>
-									</div>
-									<a href="details.html" class="item_add single-item hvr-outline-out button2">View Details</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="../assets/img/a6.png" alt="">
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="details.html">Air Tshirt Black </a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$129.99</span>
-									</div>
-									<a href="details.html" class="item_add single-item hvr-outline-out button2">View Details</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="../assets/img/a6.png" alt="">
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="details.html">Air Tshirt Black </a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$129.99</span>
-									</div>
-									<a href="details.html" class="item_add single-item hvr-outline-out button2">View Details</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="../assets/img/a6.png" alt="">
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="details.html">Air Tshirt Black </a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$129.99</span>
-									</div>
-									<a href="details.html" class="item_add single-item hvr-outline-out button2">View Details</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="../assets/img/a6.png" alt="">
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="details.html">Air Tshirt Black </a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$129.99</span>
-									</div>
-									<a href="details.html" class="item_add single-item hvr-outline-out button2">View Details</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="../assets/img/a6.png" alt="">
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="details.html">Air Tshirt Black </a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$129.99</span>
-									</div>
-									<a href="details.html" class="item_add single-item hvr-outline-out button2">View Details</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="../assets/img/a6.png" alt="">
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="details.html">Air Tshirt Black </a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$129.99</span>
-									</div>
-									<a href="details.html" class="item_add single-item hvr-outline-out button2">View Details</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="../assets/img/a6.png" alt="">
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="details.html">Air Tshirt Black </a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$129.99</span>
-									</div>
-									<a href="details.html" class="item_add single-item hvr-outline-out button2">View Details</a>
-								</div>
-							</div>
-						</div>
-
-							</div>
-						</div>
-						<div class="clearfix"></div>
-					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-
-<!-- //product-nav -->
-
-<br>
-<br>
-
-<!--card -->
-<div class="container">
-<p class="text-center">Fablooks from our <a href="medium.com">blog</a></p>
-
-<br>
-<br>
-<div class="row">
-	<div class="col-sm-3">
-		<div class="card-deck">
-			<div class="card">
-      <%= image_tag(image_path('fab2.jpg')) %>
-				<div class="card-block">
-      			<p class="card-text"><a href="blog.com">Three stylish ways to tie your scarf</a></p>
-      			<p class="card-text"><small class="text-muted">1st May, 2017</small></p>
-    			</div>
-  			</div>
 		</div>
-	</div>
-	<div class="col-sm-3">
-		<div class="card-deck">
-			<div class="card">
-          <%= image_tag(image_path('fab2.jpg')) %>
-				<div class="card-block">
-      			<p class="card-text"><a href="blog.com">Three stylish ways to tie your scarf</a></p>
-      			<p class="card-text"><small class="text-muted">1st May, 2017</small></p>
-    			</div>
-  			</div>
 		</div>
-	</div>
-	<div class="col-sm-3">
-		<div class="card-deck">
-			<div class="card">
-				<img class="card-img-top img-responsive" src="../assets/img/fab2.jpg" alt="Card image cap">
-				<div class="card-block">
-      			<p class="card-text"><a href="blog.com">Three stylish ways to tie your scarf</a></p>
-      			<p class="card-text"><small class="text-muted">1st May, 2017</small></p>
-    			</div>
-  			</div>
 		</div>
-	</div>
-	<div class="col-sm-3">
-		<div class="card-deck">
-			<div class="card">
-				<img class="card-img-top img-responsive" src="../assets/img/fab2.jpg" alt="Card image cap">
-				<div class="card-block">
-      			<p class="card-text"><a href="blog.com">Three stylish ways to tie your scarf</a></p>
-      			<p class="card-text"><small class="text-muted">1st May, 2017</small></p>
-    			</div>
-  			</div>
-		</div>
-	</div>
-</div>
-</div>
-<br>
-<br>
+
+<!-- //content-bottom -->
+
+
 <div class="clearfix"></div>
