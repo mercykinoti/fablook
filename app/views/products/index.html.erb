@@ -5,16 +5,21 @@
 		<div class="row">
 			
 			<% group.each do |product| %>
-				<div class="card gap" style="width: 20em;">
-				  <%= image_tag product.image_url(:thumbnail), :width => 315, :height => 400%>
-				  <div class="card-block">
-				    <h4 class="card-title"><%= product.name %></h4>
-				   	<h4 class="card-title">$<%= product.price %></h4>
-				    <a href="#" class="btn btn-primary">BUY</a>
-				    <%= social_share_button_tag(product.image_url, :allow_sites => %w(twitter facebook linkedin)) %>
-				  </div>
-				</div>
-			<% end %>
+          <div class="col-md-3 product-men yes-marg">
+            <div class="men-pro-item simpleCart_shelfItem">
+              <div class="men-thumb-item">
+                <%= image_tag product.image_url(:thumbnail) %>
+              </div>
+              <div class="item-info-product ">
+                <h4><a ><%= product.name %> </a></h4>
+                <div class="info-product-price">
+                  <span class="item_price">$<%= product.price %></span>
+                </div>
+                <%= link_to 'View Details', product_path(product), class: "item_add single-item hvr-outline-out button2" %>
+              </div>
+            </div>
+          </div>
+    <% end %>
 		</div>
 	<% end %>
 </div>

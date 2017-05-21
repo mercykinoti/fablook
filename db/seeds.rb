@@ -20,3 +20,10 @@ product1 = Product.create(
                       description: "a strappy summer dress that will change your life",
                       category: "dress",
                       store: store1)
+product2 = Product.create(
+    name: "shorts",
+    image:"",
+    price: 90.99,
+    description: "denim shorts that are ragged and cover",
+    category: "dress",
+    store: store1)
