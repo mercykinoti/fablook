@@ -1,14 +1,12 @@
 <h2>Review:</h2>
-<%= form_for([@product, @product.reviews.build]) do |f| %>
+<%= simple_form_for([@product, @product.reviews.build]) do |f| %>
     <p>
-      <%= f.label :name %><br>
-      <%= f.text_field :name %>
+      <%= f.input :name %>
     </p>
     <p>
-      <%= f.label :Review %><br>
-      <%= f.text_area :comment %>
+      <%= f.input :comment %>
     </p>
     <p>
-      <%= f.submit %>
+      <%= f.button :submit, class: "btn-primary" %>
     </p>
 <% end %>

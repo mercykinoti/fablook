@@ -1,10 +1,30 @@
-<p>
-  <%= image_tag @product.image_url(:thumbnail), :width => 400, :height => 400 %>
-  <%= @product.name %>
-  <%= @product.price %>
-  <%= @product.description %>
-
-</p>
+<div class="row">
+  <div class="col-lg-5">
+    <%= image_tag @product.image_url(:thumbnail), :width => 400, :height => 400 %>
+  </div>
+  <div class="col-md-7">
+    <div class="row">
+      <div class="col-md-3">
+        <%= @product.name %>
+     </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <%= @product.price %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <%= @product.description %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <%= social_share_button_tag(@product.name, :allow_sites => %w(twitter facebook)) %>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="single">
   <div class="container">
     <div class="col-sm-6"></div>
