@@ -3,6 +3,7 @@ class Product < ApplicationRecord
   multisearchable :against => [:name, :description, :category, :price]
 
   belongs_to :store
+  has_many :reviews
 
   validates_presence_of :name, :price, :description, :image, :category
 

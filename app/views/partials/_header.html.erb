@@ -14,8 +14,9 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse menu--shylock" id="nav-collapse">
 				  <ul class="nav navbar-nav menu__list center">
-					<li class="active menu__item menu__item--current"><a class="menu__link"><%= link_to 'Fablook', welcome_index_path %> <span class="sr-only">(current)</span></a></li>
-					<li class="dropdown menu__item">
+					<li class="active menu__item menu__item--current"> <%= link_to 'Fablook', welcome_index_path, class: "menu__link" %> <span class="sr-only">(current)</span></li>
+            <li class="active menu__item menu__item--current"> <%= link_to 'Stores', stores_path, class: "menu__link" %> <span class="sr-only"></span></li>
+            <li class="dropdown menu__item">
 						<a href="" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sale <span class="caret"></span></a>
 							<ul class="dropdown-menu multi-column columns-3">
 								<div class="row">
@@ -24,24 +25,18 @@
 									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="">Clothing</a></li>
-											<li><a href="">Shoes</a></li>
-											<li><a href="">Bags</a></li>
-											<li><a href="">Watches</a></li>
-											<li><a href="">Accessories</a></li>
-											<li><a href="">Jewelry</a></li>
-											<li><a href="">Caps &amp; Hats</a></li>
+											<li><%= link_to 'Clothing', products_path %></li>
+                      <li><%= link_to 'Shoes', products_path %></li>
+                      <li><%= link_to 'Bags', products_path %></li>
+                      <li><%= link_to 'Accessories', products_path %></li>
 										</ul>
 									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="">Jewellery</a></li>
-											<li><a href="">Sunglasses</a></li>
-											<li><a href="">Perfumes</a></li>
-											<li><a href="">Beauty</a></li>
-											<li><a href="">Shirts</a></li>
-											<li><a href="">Sunglasses</a></li>
-											<li><a href="">Swimwear</a></li>
+                      <li><%= link_to 'Jewellery', products_path %></li>
+                      <li><%= link_to 'Sunglasses', products_path %></li>
+                      <li><%= link_to 'Beauty', products_path %></li>
+                      <li><%= link_to 'Swimwear', products_path %></li>
 										</ul>
 									</div>
 									<div class="clearfix"></div>
@@ -54,24 +49,18 @@
 								<div class="row">
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="">Clothing</a></li>
-											<li><a href="">Shoes</a></li>
-											<li><a href="">Bags</a></li>
-											<li><a href="">Watches</a></li>
-											<li><a href="">Accessories</a></li>
-											<li><a href="">Jewelry</a></li>
-											<li><a href="">Caps &amp; Hats</a></li>
+                      <li><%= link_to 'Clothing', products_path %></li>
+                      <li><%= link_to 'Shoes', products_path %></li>
+                      <li><%= link_to 'Bags', products_path %></li>
+                      <li><%= link_to 'Accessories', products_path %></li>
 										</ul>
 									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="">Jewellery</a></li>
-											<li><a href="">Sunglasses</a></li>
-											<li><a href="">Perfumes</a></li>
-											<li><a href="">Beauty</a></li>
-											<li><a href="">Shirts</a></li>
-											<li><a href="">Sunglasses</a></li>
-											<li><a href="">Swimwear</a></li>
+                      <li><%= link_to 'Jewellery', products_path %></li>
+                      <li><%= link_to 'Sunglasses', products_path %></li>
+                      <li><%= link_to 'Beauty', products_path %></li>
+                      <li><%= link_to 'Swimwear', products_path %></li>
 										</ul>
 									</div>
 									<div class="col-sm-6 multi-gd-img multi-gd-text ">
@@ -107,7 +96,7 @@
         <% end %>
 
         <pre><%= @products.to_json %></pre>
-        <pre><%= @products %></pre>
+        <pre><%= @kofi %></pre>
 			</li>
 			<li><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Fablook Socials</li>
 		</ul>
@@ -117,6 +106,5 @@
 <!-- //header-bot -->
 
 <!-- header-bot -->
-
 
 
