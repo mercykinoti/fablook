@@ -5,7 +5,7 @@
 				<!-- Slide Image Area (1000 x 424) -->
 				<ul class="slide-group">
 					<li>
-            <%= image_tag(image_path('e4.jpg') , class: "img-responsive" )%>
+            <%= image_tag(image_path('dress.jpg') , class: "img-responsive" )%>
 					</li>
 					<li>
 						<%= image_tag(image_path('fab2.jpg') , class: "img-responsive" )%>
@@ -134,7 +134,7 @@
 							<div class="info-content electro-text simpleCart_shelfItem">
 								<h4>Accesories</h4>
 								<span class="separator"></span>
-                <%= link_to 'shop now', products_path, class: "item_add hvr-outline-out button2" %>
+                <%= link_to 'shop now', products_path + "?category_id=2", class: "item_add hvr-outline-out button2" %>
 							</div>
 						</div>
 				</div>
@@ -146,7 +146,7 @@
 							<div class="info-content electro-text simpleCart_shelfItem">
 								<h4>Shoes</h4>
 								<span class="separator"></span>
-                <%= link_to 'shop now', products_path, class: "item_add hvr-outline-out button2" %>
+                <%= link_to 'shop now', products_path + "?category_id=3", class: "item_add hvr-outline-out button2" %>
 							</div>
 						</div>
 				</div>
@@ -158,7 +158,7 @@
 							<div class="info-content electro-text simpleCart_shelfItem">
 								<h4>Beauty</h4>
 								<span class="separator"></span>
-                <%= link_to 'shop now', products_path, class: "item_add hvr-outline-out button2" %>
+                <%= link_to 'shop now', products_path + "?category_id=4", class: "item_add hvr-outline-out button2" %>
 							</div>
 						</div>
 				</div>
@@ -173,7 +173,7 @@
 							<div class="info-content electro-text simpleCart_shelfItem">
 								<h4>Clothes</h4>
 								<span class="separator"></span>
-                <%= link_to 'shop now', products_path, class: "item_add hvr-outline-out button2" %>
+                <%= link_to 'shop now', products_path + "?category_id=1", class: "item_add hvr-outline-out button2" %>
 							</div>
 						</div>
 				</div>
