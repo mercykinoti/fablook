@@ -17,18 +17,17 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  database: fablook_production
-  username: fablook
-  password: fablook
-  host: localhost
-  timeout: 5000
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  username: fablook
+  password: fablook
 
 
 development:
   <<: *default
+  database: fablook_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -86,3 +85,5 @@ test:
 production:
   <<: *default
   database: fablook_production
+  username: fablook
+  password: fablook

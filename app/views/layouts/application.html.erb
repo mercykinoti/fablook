@@ -11,15 +11,15 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %><br>
-     <div class="container">
+    <%= render 'partials/header' %><br>
+
   	<% flash.each do |key, message| %>
   		<div class="alert alert-<%= key %>">
         <%= message %>
       </div>
   	<% end %>
     <%= yield %>
-  </div>
-    <%= render 'layouts/footer' %>
+
+    <%= render 'partials/footer' %>
   </body>
 </html>

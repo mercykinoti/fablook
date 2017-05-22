@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170516102511) do
+ActiveRecord::Schema.define(version: 20170521222309) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,17 @@ ActiveRecord::Schema.define(version: 20170516102511) do
     t.index ["username"], name: "index_admins_on_username", unique: true, using: :btree
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categories_products", id: false, force: :cascade do |t|
+    t.integer "category_id", null: false
+    t.integer "product_id",  null: false
+  end
+
   create_table "choices", force: :cascade do |t|
     t.string   "answer"
     t.integer  "style_id"
@@ -41,6 +52,15 @@ ActiveRecord::Schema.define(version: 20170516102511) do
     t.datetime "updated_at", null: false
     t.string   "image"
     t.index ["style_id"], name: "index_choices_on_style_id", using: :btree
+  end
+
+  create_table "pg_search_documents", force: :cascade do |t|
+    t.text     "content"
+    t.string   "searchable_type"
+    t.integer  "searchable_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable_type_and_searchable_id", using: :btree
   end
 
   create_table "products", force: :cascade do |t|
@@ -51,18 +71,16 @@ ActiveRecord::Schema.define(version: 20170516102511) do
     t.integer  "store_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "category"
     t.index ["store_id"], name: "index_products_on_store_id", using: :btree
   end
 
-  create_table "searches", force: :cascade do |t|
-    t.string   "keywords"
-    t.string   "category"
-    t.decimal  "min_price"
-    t.decimal  "max_price"
-    t.integer  "isbn"
+  create_table "reviews", force: :cascade do |t|
+    t.string   "name"
+    t.text     "comment"
+    t.integer  "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_reviews_on_product_id", using: :btree
   end
 
   create_table "stores", force: :cascade do |t|
@@ -102,4 +120,5 @@ ActiveRecord::Schema.define(version: 20170516102511) do
 
   add_foreign_key "choices", "styles"
   add_foreign_key "products", "stores"
+  add_foreign_key "reviews", "products"
 end

@@ -4,10 +4,15 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+@import "social-share-button";
 html,
 body,
 .view {
     height: 100%;
+}
+
+.card-height {
+  height: 30%;
 }
 
 /* Carousel*/

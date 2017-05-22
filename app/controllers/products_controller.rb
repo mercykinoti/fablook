@@ -1,8 +1,17 @@
 class ProductsController < ApplicationController
 
 	def index
-		@products = Product.filter(params.slice(:category, :price, :productname)).order("created_at DESC")
+		if params[:search]
+			@products = PgSearch.multisearch(params[:search])
+		elsif params[:category_id]
+			@products = Category.find_by(id: params[:category_id]).products
+		else
+			@products = Product.order("created_at DESC")
+		end
+
+
 	end
+
 	def show
 		@product = Product.find(params[:id])
 	end

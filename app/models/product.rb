@@ -1,13 +1,15 @@
 class Product < ApplicationRecord
-  include Filterable
+  include PgSearch
+  multisearchable :against => [:name, :description, :price]
 
   belongs_to :store
+  has_many :reviews
+  has_and_belongs_to_many :categories
 
-  validates_presence_of :name, :price, :description, :image, :category
+  validates_presence_of :name, :price, :description, :image
 
-    mount_uploader :image, AvatarUploader
+  mount_uploader :image, AvatarUploader
 
  scope :price, -> (price) { where price: price }
  scope :productname, -> (name) { where("name like ?", "#{name}%")}
- scope :category, -> (category) { where category: category }
 end
