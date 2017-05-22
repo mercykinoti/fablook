@@ -15,7 +15,7 @@
 				<div class="collapse navbar-collapse menu--shylock" id="nav-collapse">
 				  <ul class="nav navbar-nav menu__list center">
 					<li class="active menu__item menu__item--current"> <%= link_to 'Fablook', welcome_index_path, class: "menu__link" %> <span class="sr-only">(current)</span></li>
-            <li class="active menu__item menu__item--current"> <%= link_to 'Stores', stores_path, class: "menu__link" %> <span class="sr-only"></span></li>
+            <li class=" menu__item"><%= link_to 'Stores', stores_path, class: "menu__link" %></li>
             <li class="dropdown menu__item">
 						<a href="" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sale <span class="caret"></span></a>
 							<ul class="dropdown-menu multi-column columns-3">
@@ -73,7 +73,7 @@
 				  </ul>
 				  <ul class="nav navbar-nav menu__list pull-right">
 				  	<li class="menu__item"><a class="menu__link" href="https://medium.com/@TessieWaithira">Blog</a></li>
-				  	<li class=" menu__item"><a class="menu__link" href="../form/index.html">My Style</a></li>
+				  	<li class=" menu__item"><%= link_to 'My Style', styles_path, class: "menu__link" %></li>
 				  </ul>
 				</div>
 
