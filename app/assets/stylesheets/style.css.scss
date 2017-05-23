@@ -5,6 +5,9 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 @import "social-share-button";
+@import "bootstrap";
+@import "font-awesome";
+
 html,
 body,
 .view {
@@ -14,6 +17,27 @@ body,
 .card-height {
   height: 30%;
 }
+.vote, .down {
+  @extend .btn;
+  @extend .btn-primary;
+}
+
+.vote {
+
+  &:before {
+    @extend .fa-thumbs-up;
+
+  }
+}
+.vote {
+
+  &:before {
+    @extend .fa-thumbs-down;
+
+  }
+}
+
+
 
 /* Carousel*/
 

@@ -17,6 +17,20 @@
       <p>Product overview</p>
       <%= social_share_button_tag(@product.name, :allow_sites => %w(twitter facebook)) %>
     </div>
+    <div>
+      <%= link_to like_product_path(@product), method: :put do %>
+          <button class=“btn” aria-label=“Left”>
+            <span class=“vote”><%= @product.get_upvotes.size %></span>
+          </button>
+      <% end %>
+
+      <%= link_to unlike_product_path(@product), method: :put do %>
+          <button type=“button” class=“btn btn-info” aria-label=“Left Align”>
+
+            <span class=“badge”><%= @product.get_downvotes.size %></span>
+          </button>
+      <% end %>
+    </div>
 
   </div>
 </div>

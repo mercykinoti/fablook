@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+	before_action :set_product, only: [:show, :upvote, :downvote]
 
 	def index
 		if params[:search]
@@ -8,8 +9,6 @@ class ProductsController < ApplicationController
 		else
 			@products = Product.order("created_at DESC")
 		end
-
-
 	end
 
 	def show
@@ -24,7 +23,23 @@ class ProductsController < ApplicationController
 		end
 	end
 
+	def upvote
+		authenticate_user!
+		@product.upvote_by current_user
+		redirect_to product_path
+	end
+
+	def downvote
+		authenticate_user!
+		@product.downvote_by current_user
+		redirect_to product_path
+	end
+
 	private
+
+	def set_product
+		@product = Product.find(params[:id])
+	end
 
 	def product_params
 		params.require(:product).permit(:name, :price, :description, :image, :category)
