@@ -14,4 +14,7 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]
     end
   end
+
+  acts_as_voter
+
 end

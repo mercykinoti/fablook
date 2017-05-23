@@ -8,6 +8,10 @@ Rails.application.routes.draw do
 
   resources :products do
     resources :reviews
+    member do
+      put 'like', to: 'products#upvote'
+      put 'unlike', to: 'products#downvote'
+    end
   end
 
   resources :stores
