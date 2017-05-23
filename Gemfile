@@ -43,9 +43,9 @@ end
 
 group :test do
   gem 'factory_girl_rails', '~> 4.0'
-  gem 'shoulda-matchers', '~> 3.1'
-  gem 'faker'
-  gem 'database_cleaner'
+  # gem 'shoulda-matchers', '~> 3.1'
+  # gem 'faker'
+  # gem 'database_cleaner'
 end
 
 group :development do
@@ -71,4 +71,7 @@ gem 'font-awesome-rails'
 gem 'devise'
 gem 'social-share-button'
 gem 'pg_search'
+gem 'omniauth-facebook'
+gem 'acts_as_votable'
+# gem 'omniauth-twitter'
 # gem 'firebase'
