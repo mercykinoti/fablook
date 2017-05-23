@@ -20,5 +20,5 @@
 /.DS_Store
 
 /config/database.yml
-/app/assets/images
+/app/assets/.images/
 /config/initializers/devise.rb
