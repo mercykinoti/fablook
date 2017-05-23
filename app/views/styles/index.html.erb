@@ -16,9 +16,6 @@
         <div class="col-sm-12 form-box">
           <form role="form" action="" method="post" class="f1">
 
-
-            <%= image_tag(image_url(''))%>
-
             <fieldset>
               <p>It's time to update your shoe closet. You're in a shoe store. What type of shoes do you instinctively look for?</p>
               <div class="row">
@@ -67,7 +64,7 @@
                   <div>
                     <input type="checkbox" name="style" id="shoe6" >
                     <label for="shoe6">
-                      <img src="../assets/img/flats.jpg">
+                      <%= image_tag(image_url('flats.jpg'))%>
                       <p>Ballerina flats</p>
 
                     </label>
@@ -77,7 +74,7 @@
                   <div>
                     <input type="checkbox" name="style" id="shoe4" >
                     <label for="shoe4">
-                      <img src="../assets/img/sandals.jpg">
+                      <%= image_tag(image_url('sandals.jpg'))%>
                       <p>Sandals</p>
 
                     </label>
@@ -151,8 +148,7 @@
                   <div>
                     <input type="checkbox" name="style" id="style1" >
                     <label for="style1">
-                      <img src="../assets/img/smart.jpg">
-
+                      <%= image_tag(image_url('smart.jpg'))%>
                     </label>
                   </div>
                 </div>
@@ -160,8 +156,7 @@
                   <div>
                     <input type="checkbox" name="style" id="style2" >
                     <label for="style2">
-                      <img src="../assets/img/office.jpg">
-
+                      <%= image_tag(image_url('office.jpg'))%>
                     </label>
                   </div>
                 </div>
@@ -169,8 +164,7 @@
                   <div>
                     <input type="checkbox" name="style" id="style3" >
                     <label for="style3">
-                      <img src="../assets/img/gown.jpg">
-
+                      <%= image_tag(image_url('gown.jpg'))%>
                     </label>
                   </div>
                 </div>
@@ -181,7 +175,7 @@
                   <div>
                     <input type="checkbox" name="style" id="style4" >
                     <label for="style4">
-                      <img src="../assets/img/casual.jpg">
+                      <%= image_tag(image_url('casual.jpg'))%>
 
                     </label>
                   </div>
@@ -190,8 +184,7 @@
                   <div>
                     <input type="checkbox" name="style" id="style5" >
                     <label for="style5">
-                      <img src="../assets/img/brand.jpg">
-
+                      <%= image_tag(image_url('brand.jpg'))%>
                     </label>
                   </div>
                 </div>
@@ -199,8 +192,7 @@
                   <div>
                     <input type="checkbox" name="style" id="style6" >
                     <label for="style6">
-                      <img src="../assets/img/afric.jpg">
-
+                      <%= image_tag(image_url('afric.jpg'))%>
                     </label>
                   </div>
                 </div>
@@ -316,7 +308,7 @@
                   <div>
                     <input type="checkbox" name="style" id="diana" >
                     <label for="diana">
-                      <img src="../assets/img/diana.jpg">
+                      <%= image_tag(image_url('diana.jpg'))%>
 
                     </label>
                   </div>
@@ -325,8 +317,7 @@
                   <div>
                     <input type="checkbox" name="style" id="nancie " >
                     <label for="nancie">
-                      <img src="../assets/img/nancie.jpg">
-
+                      <%= image_tag(image_url('nancie.jpg'))%>
                     </label>
                   </div>
                 </div>
@@ -334,7 +325,7 @@
                   <div>
                     <input type="checkbox" name="style" id="lucia" >
                     <label for="lucia">
-                      <img src="../assets/img/lucia.jpg">
+                      <%= image_tag(image_url('lucia.jpg'))%>
 
                     </label>
                   </div>
@@ -346,7 +337,7 @@
                   <div>
                     <input type="checkbox" name="style" id="joy" >
                     <label for="joy">
-                      <img src="../assets/img/joy.jpg">
+                      <%= image_tag(image_url('joy.jpg'))%>
 
                     </label>
                   </div>
@@ -355,7 +346,7 @@
                   <div>
                     <input type="checkbox" name="style" id="silvia" >
                     <label for="silvia">
-                      <img src="../assets/img/silvia.jpg">
+                      <%= image_tag(image_url('silvia.jpg'))%>
 
                     </label>
                   </div>
@@ -364,8 +355,7 @@
                   <div>
                     <input type="checkbox" name="style" id="ess" >
                     <label for="ess">
-                      <img src="../assets/img/gown.jpg">
-
+                      <%= image_tag(image_url('gown.jpg'))%>
                     </label>
                   </div>
                 </div>
@@ -432,7 +422,7 @@
               </div>
               <div class="f1-buttons">
                 <button type="button" class="btn btn-previous">
-                  <a href="../templates/Fablook.html"> View general products</a>
+                  <%= link_to 'View general products', products_path %>
                 </button>
                 <button type="button" class="btn btn-next">Take your style quiz</button>
               </div>
