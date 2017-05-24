@@ -85,5 +85,5 @@ test:
 production:
   <<: *default
   database: fablook_production
-  username: fablook
-  password: fablook
+  username: mercykinoti
+  password: ""

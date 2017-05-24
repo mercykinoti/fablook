@@ -2,6 +2,8 @@ class Product < ApplicationRecord
   include PgSearch
   multisearchable :against => [:name, :description, :price]
 
+  acts_as_votable
+
   belongs_to :store
   has_many :reviews
   has_and_belongs_to_many :categories
