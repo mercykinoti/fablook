@@ -1,9 +1,11 @@
 class StylesController < ApplicationController
   before_action :authenticate_user!
+  layout 'formlayout'
 
   def index
     @styles = Style.all
   end
+
   def show
     @style = Style.find(params[:id])
   end
