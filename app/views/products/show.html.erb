@@ -6,7 +6,7 @@
           <%= image_tag @product.image_url(:thumbnail), :width => 400, :height => 400 %>
         </div>
         <div class="item-info-product ">
-          <h4><a href="details.html"><%= @product.name %></a></h4>
+          <h4><%= @product.name %></h4>
           <div class="info-product-price">
             <span class="item_price">$<%= @product.price %></span>
           </div>
@@ -23,11 +23,18 @@
             <span class=“vote”><%= @product.get_upvotes.size %></span>
           </button>
       <% end %>
+      <div class="f1-buttons">
+
+      </div>
+
+
 
       <%= link_to unlike_product_path(@product), method: :put do %>
-          <button type=“button” class=“btn btn-info” aria-label=“Left Align”>
+          <button type="button" class="btn btn-info glyphicon-thumbs-up"><%= @product.get_downvotes.size %>
+            <button type=“button” class=“btn btn-info” aria-label=“Left Align”>
 
-            <span class=“badge”><%= @product.get_downvotes.size %></span>
+              <span class=“badge”></span>
+            </button>
           </button>
       <% end %>
     </div>
