@@ -20,10 +20,7 @@ function bar_progress(progress_line_object, direction) {
 }
 
 jQuery(document).ready(function() {
-	
-    /*
-   \
-    
+	    
     /*
         Form
     */
