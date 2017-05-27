@@ -5,16 +5,17 @@
         <div class="men-thumb-item">
           <%= image_tag @product.image_url(:thumbnail), :width => 400, :height => 400 %>
         </div>
-        <div class="item-info-product ">
-          <h4><a href="details.html"><%= @product.name %></a></h4>
-          <div class="info-product-price">
-            <span class="item_price">$<%= @product.price %></span>
-          </div>
-        </div>
       </div>
     </div>
     <div>
       <p>Product overview</p>
+      <div class="item-info-product ">
+          <h4><a href="details.html"><%= @product.name %></a></h4>
+          <div class="info-product-price">
+            <span class="item_price">$<%= @product.price %></span>
+          </div>
+      </div>
+      <hr>
       <%= social_share_button_tag(@product.name, :allow_sites => %w(twitter facebook)) %>
     </div>
     <div>
@@ -31,6 +32,10 @@
           </button>
       <% end %>
     </div>
+    <hr>
+    <button type="button" class="btn btn-warn” aria-label="Left Align">
+      
+    </button>
 
   </div>
 </div>

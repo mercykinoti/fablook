@@ -7,20 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 @import "social-share-button";
 @import "bootstrap";
 @import "font-awesome";
-.item{
-  height:300px;
-  width:350px;
-}
-.item img{
-  width:100%;
-  height:100%;
-}
-.item {
-    text-align: center;
-    img {
-        margin: 0 auto;
-    }
-}
+
 html,
 body,
 .form-background {
@@ -30,15 +17,12 @@ body,
     height: 100%;
 }
 
-.card-height {
-  height: 30%;
-}
 .vote, .down {
   @extend .btn;
   @extend .btn-primary;
 }
-.call {
-  min-height: 600px;
+.search {
+  padding-top: 20px;
 }
 .vote {
 
@@ -79,7 +63,7 @@ body,
 }
 
 html, body{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Helvetica', sans-serif;
   margin:0;
   font-size: 20px;
   background: #fff;
@@ -117,6 +101,10 @@ ul{
   margin:0;
   padding:0;
 }
+.footer.container.extend {
+  margin:0;
+  padding:0;  
+}
 label{
   margin:0;
 }
@@ -125,7 +113,7 @@ label{
 }
 .footer p {
   padding-top: 20px;
-  color: #eee;
+  color: #333;
 
 }
 .coupons {
@@ -133,21 +121,36 @@ label{
   min-height: 470px;
   padding-top: 110px;
 }
+.my-container {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+.my-container h1 {
+    padding: 200px;
+    position: relative;
+    z-index: 2;
+    font-size: 25px;
+} 
+.my-container img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+  
+}
+.my-container h1 {
+  text-align: center;
+  vertical-align: middle;
+  font-wight: 300;
+  font-size: 30px;
+}
+
+
+
 .card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 10px 20px 0 #2a3f54;
-    transition: 0.3s;
-    border-color: #b52525;
-    width: auto;
-}
-
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.card p {
-  padding: 20px;
+  padding-bottom: 20px;
 }
 
 /* Add some padding inside the card container */
@@ -293,14 +296,13 @@ label{
 }
 /* Icons */
 .footer {
-  background-color: #333;
+  background-color: #e7e7e7;
 }
 .footer-bottom a {
 
 }
 .footer li a {
-  color: #f5f5f5;
-}
+  color: #333}
 
 /* pop-up text */
 .footer-bottom a span {
@@ -367,7 +369,7 @@ label{
     background: none;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-    color: #555;
+    color: #333;
     background: none;
 }
 .navbar-nav > li {
@@ -403,25 +405,6 @@ label{
   margin: 0em 0;
 }
 
-.menu__link {
-  font-size: 1.05em;
-  font-weight: bold;
-  display: block;
-  padding: 1em;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
-  -khtml-user-select: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-.menu__link:hover,
-.menu__link:focus {
-  outline: none;
-}
 
 /* Individual styles */
 .menu--shylock .menu__link {
@@ -1387,6 +1370,12 @@ h2.resp-accordion {
     text-align: center;
     margin: 20px 0 0;
 }
+.product-image {
+  height:200px;
+}
+.product {
+  border: 2px solid;
+}
 .men-thumb-item::before {
     width: 100%;
     height: 100%;
@@ -1780,6 +1769,7 @@ ul.multi-column-dropdown li a:hover{
     color: #333;
     font-size: 18px;
     line-height: 2em;
+    font-family: 'Helvetica', sans-serif;
 }
 /*-- //coupons --*/
 /*-- contact --*/
@@ -1922,11 +1912,11 @@ display:block;
   margin-bottom: -1px;
 }
 .nav-tabs > li > a {
-  background: #f8f8f8;
+  background: #333;
   margin-right: 3px;
   border: none;
   border-radius: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Helvetica', sans-serif;
   font-size: 14px;
   color: #555;
   padding: 12px 20px;

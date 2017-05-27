@@ -1,30 +1,59 @@
-<div class="container">
-  <h1>Our Products</h1>
-
-  <div class="container">
-    <% @products.in_groups_of(4, false) do |group| %>
+<div class="container products">
+  <h1>Categories</h1>
+  <p>Shop by category</p>
+  <hr>
+  <div class="row">
+    <div class="col-md-3">
+    <p>Category</p>
+        <ul class="list-unstyled">
+          <li><a href="fablook.com">Beauty</a></li>
+          <li><a href="fablook.com">Shoes</a></li>
+          <li><a href="fablook.com">Beauty</a></li>
+          <li><a href="fablook.com">Accessories</a></li>
+        </ul>
+    <hr>     
+    <p>Price</p>
+    <select>
+      <option value="">16-20</option>
+      <option value="">21-25</option>
+      <option value="">Above 30</option>
+      <option value="" selected>26-30</option>
+    </select> 
+    <hr>
+    <p>Sorted by</p>
+    <select>
+      <option value="">16-20</option>
+      <option value="">21-25</option>
+      <option value="">Above 30</option>
+      <option value="" selected>26-30</option>
+    </select>
+    <hr>
+                   
+    </div>
+    <div class="col-md-9">
+     <% @products.in_groups_of(4, false) do |group| %>
       <div class="row">
-
-        <% group.each do |product| %>
-            <div class="col-md-3 product-men yes-marg card-height">
-              <div class="men-pro-item simpleCart_shelfItem">
-                <div class="men-thumb-item">
-                  <%= image_tag product.image_url(:thumbnail) %>
-                </div>
-                <div class="item-info-product ">
-                  <h4><a ><%= product.name %> </a></h4>
-                  <div class="info-product-price">
-                    <span class="item_price">$<%= product.price %></span>
-                  </div>
-                  <%= link_to 'View Details', product_path(product) , class: "item_add single-item hvr-outline-out button2" %>
-                </div>
-
-              </div>
-            </div>
+          <% group.each do |product| %>
+        <div class="col-md-3">
+        <div class="card" style="width: 20rem;">
+    <%= image_tag product.image_url(:thumbnail) %>
+  <div class="card-block">
+    <p><a ><%= product.name %> </a></p>
+     <p class="item_price">$<%= product.price %></p>
+     <%= link_to 'View Details', product_path(product) , class: "item_add single-item hvr-outline-out button2" %>     
+  </div>
+</div>       
+        </div>
 
       <% end %>
 
       </div>
-    <% end %>
+    <% end %>        
+      </div>      
+    
+
+    
   </div>
 </div>
+<br>
+<br>

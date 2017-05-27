@@ -1,170 +1,31 @@
-<!-- banner -->
-<div class="banner-grid">
-	<div id="visual">
-			<div class="slide-visual">
-				<!-- Slide Image Area (1000 x 424) -->
-				<ul class="slide-group">
-					<li>
-            <%= image_tag(image_url('http://res.cloudinary.com/dazy8mpa6/image/upload/v1495556806/ba1_z0xt77.jpg') , class: "img-responsive" )%>
-					</li>
-					<li>
-						<%= image_tag(image_url('http://res.cloudinary.com/dazy8mpa6/image/upload/v1495556850/ba2_nhr2py.jpg') , class: "img-responsive" )%>
-					<li>
-						<%= image_tag(image_url('http://res.cloudinary.com/dazy8mpa6/image/upload/v1495556853/ba3_vsjgzb.jpg') , class: "img-responsive" )%>
-					</li>
-				</ul>
-				<div class="clearfix"></div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
 
-	<script type="text/javascript">
-	//<![CDATA[
-		$(window).load(function() {
-			$('#visual').pignoseLayerSlider({
-				play    : '.btn-play',
-				pause   : '.btn-pause',
-				next    : '.btn-next',
-				prev    : '.btn-prev'
-			});
-		});
-	//]]>
-	</script>
-
-</div>
-
-
-
-
-<!-- //banner -->
-<br>
-<br>
-<div class="new_arrivals">
-	<div class="container">
-		<h4 class="text-center">Shop and browse by categories</h4>
-		
-<div class="electronics">
-	<div class="container">
-		<div class="col-md-8 electro-left text-center">
-			<div class="electro-img-left mask">
-				<div class="content-grid-effect slow-zoom vertical">
-
-					<div class="img-box"><%= image_tag(image_url('http://res.cloudinary.com/dazy8mpa6/image/upload/v1495551393/watch_qkwihn.jpg') , class: "img-responsive zoom-img" )%></div>
-						<div class="info-box">
-							<div class="info-content electro-text simpleCart_shelfItem">
-								<h4>Accesories</h4>
-								<span class="separator"></span>
-                <%= link_to 'shop now', products_path + "?category_id=2", class: "item_add hvr-outline-out button2" %>
-							</div>
-						</div>
-				</div>
-			</div>
-			<div class="electro-img-btm-left mask">
-				<div class="content-grid-effect slow-zoom vertical">
-					<div class="img-box"><%= image_tag(image_url('http://res.cloudinary.com/dazy8mpa6/image/upload/v1495551392/e1_g21y49.jpg') , class: "img-responsive zoom-img" )%></div>
-						<div class="info-box">
-							<div class="info-content electro-text simpleCart_shelfItem">
-								<h4>Shoes</h4>
-								<span class="separator"></span>
-                <%= link_to 'shop now', products_path + "?category_id=2", class: "item_add hvr-outline-out button2" %>
-							</div>
-						</div>
-				</div>
-			</div>
-			<div class="electro-img-btm-right mask">
-				<div class="content-grid-effect slow-zoom vertical">
-					<div class="img-box"><%= image_tag(image_url('http://res.cloudinary.com/dazy8mpa6/image/upload/v1495551480/e2_pqokpe.jpg') , class: "img-responsive zoom-img" )%></div>
-						<div class="info-box">
-							<div class="info-content electro-text simpleCart_shelfItem">
-								<h4>Beauty</h4>
-								<span class="separator"></span>
-                <%= link_to 'shop now', products_path + "?category_id=4", class: "item_add hvr-outline-out button2" %>
-							</div>
-						</div>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-		<div class="col-md-4 electro-right text-center">
-			<div class="electro-img-rt mask">
-				<div class="content-grid-effect slow-zoom vertical">
-					<div class="img-box"><%= image_tag(image_url('http://res.cloudinary.com/dazy8mpa6/image/upload/v1495551537/e4_wqz0em.jpg') , class: "img-responsive zoom-img" )%></div>
-						<div class="info-box">
-							<div class="info-content electro-text simpleCart_shelfItem">
-								<h4>Clothes</h4>
-								<span class="separator"></span>
-                <%= link_to 'shop now', products_path + "?category_id=1", class: "item_add hvr-outline-out button2" %>
-							</div>
-						</div>
-				</div>
-			</div>
-		</div>
-		</div>
-		</div>
-		</div>
-
-
-<!-- content -->
-
-<!-- offers -->
-
-<div class="new_arrivals">
-	<div class="container">
-		
-		<h4 class="text-center">Get latest offers and products that suit your style</h4>
-		<div class="new_grids">
-			<div class="col-md-4 new-gd-left">
-				<%= image_tag(image_url('http://res.cloudinary.com/dazy8mpa6/image/upload/v1495551214/wed1_lswoaw.jpg') , class: "img-responsive" )%>
-				<div class="wed-brandtwo simpleCart_shelfItem">
-					<h4>Latest Offers</h4>
-					<h4>Instant Updates</h4>
-				</div>
-			</div>
-			<div class="col-md-4 new-gd-middle">
-				<div class="new-levis">
-					<div class="mid-img">
-						<%= image_tag(image_url('http://res.cloudinary.com/dazy8mpa6/image/upload/v1495551213/levis1_pqnw8n.png') , class: "img-responsive" )%>
-					</div>
-					<div class="mid-text">
-						<h4>up to 40% <span>off</span></h4>
-            <%= link_to 'shop now', products_path, class: "item_add hvr-outline-out button2" %>
-					</div>
-
-					<div class="clearfix"></div>
-				</div>
-				<div class="new-levis">
-					<div class="mid-text">
-						<h4>up to 50% <span>off</span></h4>
-            <%= link_to 'shop now', products_path, class: "item_add hvr-outline-out button2" %>
-					</div>
-					<div class="mid-img">
-						<%= image_tag(image_url('http://res.cloudinary.com/dazy8mpa6/image/upload/v1495551316/dig_hyxtwc.jpg') , class: "img-responsive" )%>
-						
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-			<div class="col-md-4 new-gd-left">
-				<%= image_tag(image_url('http://res.cloudinary.com/dazy8mpa6/image/upload/v1495551215/wed2_yrsomd.jpg') , class: "img-responsive" )%>
-				<div class="wed-brandtwo simpleCart_shelfItem">
-					<h4>Top stores</h4>
-					<h4>around you</h4>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
+<div class="slider">
+	<div class="my-container">
+    <h1>Shop our top picks</h1>
+ 	<%= image_tag(image_url('ba5.jpg') , class: "img-responsive" )%>  
+	</div>
+	<div class="my-container">
+    <h1>Scotch Scotch Scotch</h1>
+ 	<%= image_tag(image_url('ba7.jpg') , class: "img-responsive" )%>  
+	</div>
+	<div class="my-container">
+    <h1>Scotch Scotch Scotch</h1>
+ 	<%= image_tag(image_url('ba10.jpg') , class: "img-responsive" )%>  
 	</div>
 </div>
-<!-- offers -->
-<!-- content -->
-<!--categories-->
-<hr>
-<!-- How it works -->
+<script type="text/javascript">
+	function fadecontent(){
+		$(".slider .my-container:first").fadeIn(1000).delay(2000).fadeOut(1000, function() {
+			$(this).appendTo($(this).parent());
+			fadecontent();
+		});
+	}
+	fadecontent();
+</script>
 <hr>
 <div class="container">
 	<div class="row flow">
-	<h4 class="text-center">Innovative styles for the creative generation</h4>
+	<p class="text-center">Innovative styles for the creative generation</p>
 		<div class="coupons-grids text-center">
 			
 			<div class="col-md-4 coupons-gd">
@@ -186,28 +47,87 @@
 	</div>	
 </div>
 <hr>
+<div class="container">
+	<div class="row">
+	<p class="text-center">Shop and Browse by category</p>
+		<div class="col-md-4 electro-right text-center">
+			<div class="electro-img-rt mask">
+				<div class="content-grid-effect slow-zoom vertical">
+					<div class="img-box"><%= image_tag(image_url('ba5.jpg') , class: "img-responsive zoom-img img-rounded " )%></div>
+						<div class="info-box">
+							<div class="info-content electro-text simpleCart_shelfItem">
+								<h4>Clothes</h4>
+								<span class="separator"></span>
+                <%= link_to 'shop now', products_path + "?category_id=1", class: "item_add hvr-outline-out button2" %>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 electro-right text-center">
+			<div class="electro-img-rt mask">
+				<div class="content-grid-effect slow-zoom vertical">
+					<div class="img-box"><%= image_tag(image_url('ba5.jpg') , class: "img-responsive img-rounded zoom-img" )%></div>
+						<div class="info-box">
+							<div class="info-content electro-text simpleCart_shelfItem">
+								<h4>Clothes</h4>
+								<span class="separator"></span>
+                <%= link_to 'shop now', products_path + "?category_id=1", class: "item_add hvr-outline-out button2" %>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 electro-right text-center">
+			<div class="electro-img-rt mask">
+				<div class="content-grid-effect slow-zoom vertical">
+					<div class="img-box"><%= image_tag(image_url('ba5.jpg') , class: "img-responsive zoom-img img-rounded " )%></div>
+						<div class="info-box">
+							<div class="info-content electro-text simpleCart_shelfItem">
+								<h4>Clothes</h4>
+								<span class="separator"></span>
+                <%= link_to 'shop now', products_path + "?category_id=1", class: "item_add hvr-outline-out button2" %>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
+<hr>
+
 <!-- Brands -->
 <div class="container">
 	<div class="row">
-		<h4 class="text-center">Featured brands</h4>
-			<div class="col-md-3">
+		<h4 class="text-center">Featured stores</h4>
+			<div class="col-md-2">
 				<a href="">
-					 <%= image_tag(image_url('vivo.jpg') , class: "img-responsive" )%>  
+					 <%= image_tag(image_url('mrp.png') , class: "img-responsive" )%>  
 				</a>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-2">
+				<a href="">
+					 <%= image_tag(image_url('mrp.png') , class: "img-responsive" )%>  
+				</a>
+			</div>
+			<div class="col-md-2">
 				<a href="">
 					 <%= image_tag(image_url('mrp.png') , class: "img-responsive" )%>  
 				</a>
 			</div>		
-			<div class="col-md-3">
+			<div class="col-md-2">
 				<a href="">
 					 <%= image_tag(image_url('jumia.png') , class: "img-responsive" )%>  
 				</a>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-2">
 				<a href="">
 					 <%= image_tag(image_url('store66.png') , class: "img-responsive" )%>  
+				</a>
+			</div>
+			<div class="col-md-2">
+				<a href="">
+					 <%= image_tag(image_url('mrp.png') , class: "img-responsive" )%>  
 				</a>
 			</div>						
 	</div>	
