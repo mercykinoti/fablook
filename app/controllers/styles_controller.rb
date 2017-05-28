@@ -9,11 +9,22 @@ class StylesController < ApplicationController
   def show
     @style = Style.find(params[:id])
   end
+
   def new
     @style = Style.new
+    # @style.build_choice
+    @user = User.new
   end
+
   def create
+    @style = Style.build(style_params)
+    # first_name = params[:user][:first_name]
+
+    # style = Style.create(question: 'which style do you prefer')
+    render json: params
+    return
     @style = Style.new(style_params)
+
     if @style.save
       redirect_to @style
     else
@@ -33,5 +44,6 @@ class StylesController < ApplicationController
 
   def style_params
     params.require(:style).permit(:question)
+    # , choice_attributes: [:answer]
   end
 end
