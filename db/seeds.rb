@@ -27,3 +27,11 @@ product2 = Product.create(
     description: "denim shorts that are ragged and cover",
     category: "dress",
     store: store1)
+
+product3 = Product.create(
+    name: "ball gown",
+    image:"",
+    price: 100.80,
+    description: "a long ball gown with flarred",
+    category: "dress",
+    store: store1)
