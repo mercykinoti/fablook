@@ -9,14 +9,16 @@
 
 <script type="text/javascript">
 function slide(){
+	var host = window.location.host;
+	var proto = window.location.protocol;
 	setTimeout(function(){
-		document.getElementById('slider-image').src = window.location.href+"/images/ba7.jpg"
+		document.getElementById('slider-image').src = proto+"//"+host+"/images/ba7.jpg"
 	}, 2000);
 		setTimeout(function(){
-		document.getElementById('slider-image').src = window.location.href+"/images/ba5.jpg"
+		document.getElementById('slider-image').src = proto+"//"+host+"/images/ba5.jpg"
 	}, 4000);
 		setTimeout(function(){
-		document.getElementById('slider-image').src = window.location.href+"/images/ba10.jpg";
+		document.getElementById('slider-image').src = proto+"//"+host+"/images/ba10.jpg";
 		slide();
 	}, 6000);
 }
