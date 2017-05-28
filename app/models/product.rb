@@ -3,7 +3,7 @@ class Product < ApplicationRecord
   # multisearchable :against => [:name, :description, :price]
 
   include PgSearch
-  pg_search_scope :search_by_tag, :against => [:tags, :name],
+  pg_search_scope :search_by_tags, :against => [:tags, :name],
                   using: {
                       tsearch: {
                           any_word: true
