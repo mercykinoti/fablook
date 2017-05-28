@@ -1,4 +1,4 @@
-<div class="container products">
+<div class="container-fluid products">
   <h1>Categories</h1>
   <p>Shop by category</p>
   <hr>
@@ -30,12 +30,12 @@
     <hr>
                    
     </div>
-    <div class="col-md-9">
      <% @products.in_groups_of(4, false) do |group| %>
-      <div class="row">
-          <% group.each do |product| %>
+    <div class="col-md-9">
+       <% group.each do |product| %>
+      <div class="row">       
         <div class="col-md-3">
-        <div class="card" style="width: 20rem;">
+        <div class="card" style="width: 20rem; ">
     <%= image_tag product.image_url(:thumbnail) %>
   <div class="card-block">
     <p><a ><%= product.name %> </a></p>
@@ -49,11 +49,9 @@
 
       </div>
     <% end %>        
-      </div>      
+      </div>
     
-
     
   </div>
 </div>
-<br>
-<br>
+
