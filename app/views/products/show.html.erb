@@ -19,22 +19,14 @@
     </div>
     <div>
       <%= link_to like_product_path(@product), method: :put do %>
-          <button class=“btn” aria-label=“Left”>
-            <span class=“vote”><%= @product.get_upvotes.size %></span>
+          <button type="button" class="btn btn-info glyphicon-thumbs-up"> Like
+            <%= @product.get_upvotes.size %>
           </button>
       <% end %>
-      <div class="f1-buttons">
-
-      </div>
-
-
 
       <%= link_to unlike_product_path(@product), method: :put do %>
-          <button type="button" class="btn btn-info glyphicon-thumbs-up"><%= @product.get_downvotes.size %>
-            <button type=“button” class=“btn btn-info” aria-label=“Left Align”>
-
-              <span class=“badge”></span>
-            </button>
+          <button type="button" class="btn btn-info glyphicon-thumbs-up">UnLike
+            <%= @product.get_downvotes.size %>
           </button>
       <% end %>
     </div>

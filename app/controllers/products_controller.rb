@@ -2,13 +2,22 @@ class ProductsController < ApplicationController
 	before_action :set_product, only: [:show, :upvote, :downvote]
 
 	def index
-		if params[:search]
-			@products = PgSearch.multisearch(params[:search])
-		elsif params[:category_id]
-			@products = Category.find_by(id: params[:category_id]).products
-		else
-			@products = Product.order("created_at DESC")
+		@tags = ''
+
+		current_user.answers.each do |answer|
+			answer.choices.each do |choice|
+				@tags = [@tags, choice.tags].join('')
+			end
 		end
+
+		@products = Product.search_by_tags(@tags)
+		# if params[:search]
+		# 	@products = PgSearch.multisearch(params[:search])
+		# elsif params[:category_id]
+		# 	@products = Category.find_by(id: params[:category_id]).products
+		# else
+		# 	@products = Product.order("created_at DESC")
+		# end
 	end
 
 	def search

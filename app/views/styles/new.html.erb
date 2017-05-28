@@ -1,3 +1,22 @@
 <h1>Create your style</h1>
 
-<%= render 'partials/style' %><br>
+<%= form_tag styles_create_path, method: 'post' do %>
+    <% @quiz.styles.each_with_index do |question, index| %>
+        <div class="question">
+          <%= "#{index + 1}. #{question.question}" %>
+          <div class="choices">
+            <% question.choices.each do |choice| %>
+                <input type="checkbox"
+                       name="<%= "quiz[#{question.id}[choice_ids]][]" %>"
+                       value="<%= choice.id %>"
+                       id="<%= choice.id %>">
+                <label for="<%= choice.id %>"><%= choice.label %></label>
+                <br>
+            <% end %>
+          </div>
+        </div>
+    <% end %>
+
+    <input type="submit" value="Save Profile">
+<% end %>
+
