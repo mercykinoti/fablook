@@ -1,30 +1,31 @@
-<div class="slider"   >
-	<div class="my-container" >
-	<button type="button" class="btn btn-warn” aria-label="Left Align">
+<div class="slider">
+	<div class="my-container">
     <h1><%= link_to 'Shop top picks', products_path %></h1>
-    <%= image_tag(image_url('https://res.cloudinary.com/dazy8mpa6/image/upload/v1496074756/ba10_airykz.jpg')) %>
+    <%= image_tag(image_url('https://res.cloudinary.com/dazy8mpa6/image/upload/v1496074756/ba10_airykz.jpg'),
+                  class: 'img-responsive', id: 'slider-image') %>
 	</div>
 </div>
 
 <script type="text/javascript">
 function slide(){
-	var host = window.location.host;
-	var proto = window.location.protocol;
 	setTimeout(function(){
-		document.getElementById('slider-image').src = proto+"//"+host+"https://res.cloudinary.com/dazy8mpa6/image/upload/v1496074760/ba7_calos8.jpg"
+		document.getElementById('slider-image').src = "https://res.cloudinary.com/dazy8mpa6/image/upload/v1496074760/ba7_calos8.jpg"
 	}, 2000);
-		setTimeout(function(){
-		document.getElementById('slider-image').src = proto+"//"+host+"https://res.cloudinary.com/dazy8mpa6/image/upload/v1496074519/ba5_lzap47.jpg"
+
+	setTimeout(function(){
+		document.getElementById('slider-image').src = "https://res.cloudinary.com/dazy8mpa6/image/upload/v1496074519/ba5_lzap47.jpg"
 	}, 4000);
-		setTimeout(function(){
-		document.getElementById('slider-image').src = proto+"//"+host+"https://res.cloudinary.com/dazy8mpa6/image/upload/v1496074756/ba10_airykz.jpg";
+
+	setTimeout(function(){
+		document.getElementById('slider-image').src = "https://res.cloudinary.com/dazy8mpa6/image/upload/v1496074756/ba10_airykz.jpg";
 		slide();
 	}, 6000);
 }
 slide();
-
 </script>
+
 <hr>
+
 <div class="container">
 	<div class="row flow">
 	<p class="text-center">Innovative styles for the creative generation</p>

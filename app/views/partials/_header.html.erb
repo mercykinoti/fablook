@@ -1,124 +1,118 @@
 <!-- banner -->
 <div class="container">
-	<nav class="navbar navbar-fixed-top navbar-default ">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				  </button>
-				</div>
+  <nav class="navbar navbar-fixed-top navbar-default ">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
 
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse menu--shylock" id="nav-collapse">
-				  <ul class="nav navbar-nav menu__list center">
-					<li class="active menu__item menu__item--current"> <%= link_to 'Fablook', welcome_index_path, class: "" %> <span class="sr-only">(current)</span></li>
-            <li class=" menu__item"><%= link_to 'Stores', stores_path, class: "" %></li>
-            <li class="dropdown menu__item">
-						<a href="" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sale <span class="caret"></span></a>
-							<ul class="dropdown-menu multi-column columns-3">
-								<div class="row">
-									<div class="col-sm-6 multi-gd-img1 multi-gd-text ">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse menu--shylock" id="nav-collapse">
+      <ul class="nav navbar-nav menu__list center">
+        <li class="active menu__item menu__item--current">
+          <%= link_to 'Fablook', welcome_index_path, class: "" %> <span class="sr-only">(current)</span>
+        </li>
+        <li class=" menu__item">
+          <%= link_to 'Stores', stores_path, class: "" %>
+        </li>
+        <li class="dropdown menu__item">
+          <a href="" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sale
+            <span class="caret"></span></a>
+          <ul class="dropdown-menu multi-column columns-3">
+            <div class="row">
+              <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
 
 
-										<a href=""><%= image_tag(image_path('fab2.jpg') , class: "img-responsive" )%></a>
-			</div>
-									<div class="col-sm-3 multi-gd-img">
-										<ul class="multi-column-dropdown">
-											<li><%= link_to 'Clothing', products_path %></li>
-                      <li><%= link_to 'Shoes', products_path %></li>
-                      <li><%= link_to 'Bags', products_path %></li>
-                      <li><%= link_to 'Accessories', products_path %></li>
-										</ul>
-									</div>
-									<div class="col-sm-3 multi-gd-img">
-										<ul class="multi-column-dropdown">
-                      <li><%= link_to 'Jewellery', products_path %></li>
-                      <li><%= link_to 'Sunglasses', products_path %></li>
-                      <li><%= link_to 'Beauty', products_path %></li>
-                      <li><%= link_to 'Swimwear', products_path %></li>
-										</ul>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</ul>
-					</li>
-					<li class="dropdown menu__item">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Fabs <span class="caret"></span></a>
-							<ul class="dropdown-menu multi-column columns-3">
-								<div class="row">
-									<div class="col-sm-3 multi-gd-img">
-										<ul class="multi-column-dropdown">
-                      <li><%= link_to 'Clothing', products_path %></li>
-                      <li><%= link_to 'Shoes', products_path %></li>
-                      <li><%= link_to 'Bags', products_path %></li>
-                      <li><%= link_to 'Accessories', products_path %></li>
-										</ul>
-									</div>
-									<div class="col-sm-3 multi-gd-img">
-										<ul class="multi-column-dropdown">
-                      <li><%= link_to 'Jewellery', products_path %></li>
-                      <li><%= link_to 'Sunglasses', products_path %></li>
-                      <li><%= link_to 'Beauty', products_path %></li>
-                      <li><%= link_to 'Swimwear', products_path %></li>
-										</ul>
-									</div>
-									<div class="col-sm-6 multi-gd-img multi-gd-text ">
-									
-										<a href=""><%= image_tag(image_path('fab2.jpg') , class: "img-responsive" )%></a>
+                <a href=""><%= image_tag(image_path('fab2.jpg'), class: "img-responsive") %></a>
+              </div>
+              <div class="col-sm-3 multi-gd-img">
+                <ul class="multi-column-dropdown">
+                  <li><%= link_to 'Clothing', products_path %></li>
+                  <li><%= link_to 'Shoes', products_path %></li>
+                  <li><%= link_to 'Bags', products_path %></li>
+                  <li><%= link_to 'Accessories', products_path %></li>
+                </ul>
+              </div>
+              <div class="col-sm-3 multi-gd-img">
+                <ul class="multi-column-dropdown">
+                  <li><%= link_to 'Jewellery', products_path %></li>
+                  <li><%= link_to 'Sunglasses', products_path %></li>
+                  <li><%= link_to 'Beauty', products_path %></li>
+                  <li><%= link_to 'Swimwear', products_path %></li>
+                </ul>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </ul>
+        </li>
+        <li class="dropdown menu__item">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Fabs
+            <span class="caret"></span></a>
+          <ul class="dropdown-menu multi-column columns-3">
+            <div class="row">
+              <div class="col-sm-3 multi-gd-img">
+                <ul class="multi-column-dropdown">
+                  <li><%= link_to 'Clothing', products_path %></li>
+                  <li><%= link_to 'Shoes', products_path %></li>
+                  <li><%= link_to 'Bags', products_path %></li>
+                  <li><%= link_to 'Accessories', products_path %></li>
+                </ul>
+              </div>
+              <div class="col-sm-3 multi-gd-img">
+                <ul class="multi-column-dropdown">
+                  <li><%= link_to 'Jewellery', products_path %></li>
+                  <li><%= link_to 'Sunglasses', products_path %></li>
+                  <li><%= link_to 'Beauty', products_path %></li>
+                  <li><%= link_to 'Swimwear', products_path %></li>
+                </ul>
+              </div>
+              <div class="col-sm-6 multi-gd-img multi-gd-text ">
 
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</ul>
-					</li>
+                <a href=""><%= image_tag(image_path('fab2.jpg'), class: "img-responsive") %></a>
 
-				  </ul>
-				  <ul>
-				  	<div class="row search">
-	<div class="col-md-4">
-	</div>	
-	<div class="col-md-6">
-		<li>
-        <!-- Searchbar -->
-         <%= form_tag root_path, :method => 'get', id: 'search-form' do %>
-            <p>
-              <%= text_field_tag :search, params[:search], placeholder: 'Search Style' , class: 'form-control'  %>
-            
-            </p>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </ul>
+        </li>
+      </ul>
+
+      <%= form_tag root_path, :method => 'get', id: 'search-form', class: 'navbar-form navbar-left' do %>
+          <div class="form-group">
+            <%= text_field_tag :search, params[:search], placeholder: 'Search Style', class: 'form-control' %>
+          </div>
+    <% end %>
+
+      <ul class="nav navbar-nav menu__list pull-right">
+        <li class="menu__item"><a class="" href="https://medium.com/@TessieWaithira">Blog</a></li>
+        <li class=" menu__item"><%= link_to 'My Style', styles_new_path, class: "" %></li>
+
+        <% if user_signed_in? %>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <%= current_user.name %>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li><%= link_to 'Profile', edit_user_registration_path %></li>
+                <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
+              </ul>
+            </li>
+        <% else %>
+            <li><%= link_to 'Log In', new_user_session_path %></li>
+            <li><%= link_to 'Sign Up', new_user_registration_path %></li>
         <% end %>
 
-			</li>	
-	</div>
-</div>
-				  </ul>
-				  <ul class="nav navbar-nav menu__list pull-right">
-				  	<li class="menu__item"><a class="" href="https://medium.com/@TessieWaithira">Blog</a></li>
-				  	<li class=" menu__item"><%= link_to 'My Style', styles_new_path, class: "" %></li>
-
-              <% if user_signed_in? %>
-                  <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                      <%= current_user.name %>
-                      <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><%= link_to 'Profile', edit_user_registration_path %></li>
-                      <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
-                    </ul>
-                  </li>
-              <% else %>
-                  <li><%= link_to 'Log In', new_user_session_path %></li>
-                  <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-              <% end %>
-
-				  </ul>
-				</div>
+      </ul>
+    </div>
 
 
-	</nav>
+  </nav>
 </div>
 <hr>
 
