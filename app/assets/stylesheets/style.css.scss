@@ -16,6 +16,12 @@ body,
 .view {
     height: 100%;
 }
+.form {
+  padding-top: 100px;
+}
+.login {
+  border: 15px;
+}
 
 .vote, .down {
   @extend .btn;
