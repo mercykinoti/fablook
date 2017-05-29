@@ -27,28 +27,29 @@
       <option value="">Above 30</option>
       <option value="" selected>26-30</option>
     </select>
-    <hr>
-                   
+    <hr>                   
     </div>
+    <div>
      <% @products.in_groups_of(4, false) do |group| %>
-    <div class="col-md-9">
-       <% group.each do |product| %>
-      <div class="row">       
+    <div class="col-md-9">     
+      <div class="row">  
+        <% group.each do |product| %>     
         <div class="col-md-3">
         <div class="card" style="width: 20rem; ">
-    <%= image_tag product.image_url(:thumbnail) %>
-  <div class="card-block">
-    <p><a ><%= product.name %> </a></p>
-     <p class="item_price">$<%= product.price %></p>
-     <%= link_to 'View Details', product_path(product) , class: "item_add single-item hvr-outline-out button2" %>     
-  </div>
-</div>       
+        <%= image_tag product.image_url(:thumbnail) %>
+        <div class="card-block">
+          <p><a ><%= product.name %> </a></p>
+          <p class="item_price">$<%= product.price %></p>
+          <%= link_to 'View Details', product_path(product) , class: "item_add single-item hvr-outline-out button2" %>    
         </div>
-
-      <% end %>
+        </div>       
+        </div>
+         <% end %>     
 
       </div>
-    <% end %>        
+           
+    </div>
+      <% end %>
       </div>
     
     
