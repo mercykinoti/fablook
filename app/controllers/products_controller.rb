@@ -3,14 +3,16 @@ class ProductsController < ApplicationController
 
 	def index
 		@tags = ''
-
-		current_user.answers.each do |answer|
-			answer.choices.each do |choice|
-				@tags = [@tags, choice.tags].join('')
+		if current_user
+			current_user.answers.each do |answer|
+				answer.choices.each do |choice|
+					@tags = [@tags, choice.tags].join('')
+				end
 			end
+			@products = Product.search_by_tags(@tags)
+		else
+			@products = Product.order("created_at DESC")
 		end
-
-		@products = Product.search_by_tags(@tags)
 		# if params[:search]
 		# 	@products = PgSearch.multisearch(params[:search])
 		# elsif params[:category_id]
