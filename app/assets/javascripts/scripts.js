@@ -24,7 +24,6 @@ jQuery(document).ready(function() {
     /*
         Fullscreen background
     */
-    $.backstretch ('image-url(1.jpg)');
     
     $('#top-navbar-1').on('shown.bs.collapse', function(){
     	$.backstretch("resize");
