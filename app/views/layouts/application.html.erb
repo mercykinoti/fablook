@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width">
     <title>Fablook</title>
     <%= csrf_meta_tags %>
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
@@ -11,15 +14,14 @@
   <body>
     <%= render 'partials/header' %><br>
 
-  	<% flash.each do |key, message| %>
-  		<div class="alert alert-<%= key %>">
+    <% flash.each do |key, message| %>
+      <div class="alert alert-<%= key %>">
         <%= message %>
       </div>
-  	<% end %>
+    <% end %>
     <%= yield %>
 
     <%= render 'partials/footer' %>
   </body>
-
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </html>

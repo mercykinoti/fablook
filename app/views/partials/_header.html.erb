@@ -1,6 +1,6 @@
 <!-- banner -->
-<div class="banner-top">
-	<nav class="navbar navbar-fixed-top navbar-inverse ">
+<div class="container">
+	<nav class="navbar navbar-fixed-top navbar-default ">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
 				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
@@ -14,18 +14,17 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse menu--shylock" id="nav-collapse">
 				  <ul class="nav navbar-nav menu__list center">
-					<li class="active menu__item menu__item--current"> <%= link_to 'Fablook', welcome_index_path, class: "menu__link" %> <span class="sr-only">(current)</span></li>
-            <li class=" menu__item"><%= link_to 'Stores', stores_path, class: "menu__link" %></li>
+					<li class="active menu__item menu__item--current"> <%= link_to 'Fablook', welcome_index_path, class: "" %> <span class="sr-only">(current)</span></li>
+            <li class=" menu__item"><%= link_to 'Stores', stores_path, class: "" %></li>
             <li class="dropdown menu__item">
-						<a href="" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sale <span class="caret"></span></a>
+						<a href="" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sale <span class="caret"></span></a>
 							<ul class="dropdown-menu multi-column columns-3">
 								<div class="row">
 									<div class="col-sm-6 multi-gd-img1 multi-gd-text ">
+
+
 										<a href=""><%= image_tag(image_path('fab2.jpg') , class: "img-responsive" )%></a>
-
-										<a href=""><%= image_tag(image_path('fab2.jpg')) %></a>
-
-									</div>
+			</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
 											<li><%= link_to 'Clothing', products_path %></li>
@@ -47,7 +46,7 @@
 							</ul>
 					</li>
 					<li class="dropdown menu__item">
-						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Fabs <span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Fabs <span class="caret"></span></a>
 							<ul class="dropdown-menu multi-column columns-3">
 								<div class="row">
 									<div class="col-sm-3 multi-gd-img">
@@ -70,17 +69,34 @@
 									
 										<a href=""><%= image_tag(image_path('fab2.jpg') , class: "img-responsive" )%></a>
 
-										<a href=""><%= image_tag(image_path('fab2.jpg')) %></a>
-
 									</div>
 									<div class="clearfix"></div>
 								</div>
 							</ul>
 					</li>
+
+				  </ul>
+				  <ul>
+				  	<div class="row search">
+	<div class="col-md-4">
+	</div>	
+	<div class="col-md-6">
+		<li>
+        <!-- Searchbar -->
+         <%= form_tag root_path, :method => 'get', id: 'search-form' do %>
+            <p>
+              <%= text_field_tag :search, params[:search], placeholder: 'Search Style' , class: 'form-control'  %>
+            
+            </p>
+        <% end %>
+
+			</li>	
+	</div>
+</div>
 				  </ul>
 				  <ul class="nav navbar-nav menu__list pull-right">
-				  	<li class="menu__item"><a class="menu__link" href="https://medium.com/@TessieWaithira">Blog</a></li>
-				  	<li class=" menu__item"><%= link_to 'My Style', styles_path, class: "menu__link" %></li>
+				  	<li class="menu__item"><a class="" href="https://medium.com/@TessieWaithira">Blog</a></li>
+				  	<li class=" menu__item"><%= link_to 'My Style', styles_path, class: "" %></li>
 
               <% if user_signed_in? %>
                   <li class="dropdown">
@@ -104,29 +120,7 @@
 
 	</nav>
 </div>
-<!-- //banner-top -->
-<!-- header -->
-<div class="header">
-	<div class="container">
-		<ul>
-			<li><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Your world of fashion</li>
-			<li>
-        <!-- Searchbar -->
-        <%= form_tag root_path, :method => 'get', id: 'search-form' do %>
-            <p>
-              <%= text_field_tag :search, params[:search], placeholder: 'Search' %>
-              <%= submit_tag "Search", :name => nil %>
-            </p>
-        <% end %>
+<hr>
 
-			</li>
-			<li><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Fablook Socials</li>
-		</ul>
-	</div>
-</div>
-<!-- //header -->
-<!-- //header-bot -->
-
-<!-- header-bot -->
 
 
