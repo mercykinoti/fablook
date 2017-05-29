@@ -20,8 +20,8 @@
     </div>
     <div>
       <%= link_to like_product_path(@product), method: :put do %>
-          <button class=“btn” aria-label=“Left”>
-            <span class=“vote”><%= @product.get_upvotes.size %></span>
+          <button type="button" class="btn btn-info glyphicon-thumbs-up"> Like
+            <%= @product.get_upvotes.size %>
           </button>
       <% end %>
 
@@ -29,6 +29,7 @@
           <button type=“button” class=“btn btn-info” aria-label=“Left Align”>
 
             <span class=“badge”><%= @product.get_downvotes.size %></span>
+
           </button>
       <% end %>
     </div>

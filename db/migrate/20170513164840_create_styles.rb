@@ -7,3 +7,4 @@ class CreateStyles < ActiveRecord::Migration[5.0]
     end
   end
 end
+rails g migration AddUserToUploads user:references

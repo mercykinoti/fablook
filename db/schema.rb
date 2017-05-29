@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170528114647) do
+ActiveRecord::Schema.define(version: 20170528152149) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -92,6 +92,12 @@ ActiveRecord::Schema.define(version: 20170528114647) do
     t.index ["store_id"], name: "index_products_on_store_id", using: :btree
   end
 
+  create_table "quizzes", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "reviews", force: :cascade do |t|
     t.string   "name"
     t.text     "comment"
@@ -114,6 +120,8 @@ ActiveRecord::Schema.define(version: 20170528114647) do
     t.string   "question"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "quiz_id"
+    t.index ["quiz_id"], name: "index_styles_on_quiz_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -158,4 +166,5 @@ ActiveRecord::Schema.define(version: 20170528114647) do
   add_foreign_key "choices", "styles"
   add_foreign_key "products", "stores"
   add_foreign_key "reviews", "products"
+  add_foreign_key "styles", "quizzes"
 end
