@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170523073025) do
+ActiveRecord::Schema.define(version: 20170528152149) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,20 @@ ActiveRecord::Schema.define(version: 20170523073025) do
     t.index ["username"], name: "index_admins_on_username", unique: true, using: :btree
   end
 
+  create_table "answers", force: :cascade do |t|
+    t.integer  "style_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["style_id"], name: "index_answers_on_style_id", using: :btree
+    t.index ["user_id"], name: "index_answers_on_user_id", using: :btree
+  end
+
+  create_table "answers_choices", id: false, force: :cascade do |t|
+    t.integer "answer_id", null: false
+    t.integer "choice_id", null: false
+  end
+
   create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -51,6 +65,9 @@ ActiveRecord::Schema.define(version: 20170523073025) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "image"
+    t.string   "tags"
+    t.string   "label"
+    t.string   "image_url"
     t.index ["style_id"], name: "index_choices_on_style_id", using: :btree
   end
 
@@ -71,7 +88,14 @@ ActiveRecord::Schema.define(version: 20170523073025) do
     t.integer  "store_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.text     "tags"
     t.index ["store_id"], name: "index_products_on_store_id", using: :btree
+  end
+
+  create_table "quizzes", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -96,6 +120,8 @@ ActiveRecord::Schema.define(version: 20170523073025) do
     t.string   "question"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "quiz_id"
+    t.index ["quiz_id"], name: "index_styles_on_quiz_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -135,7 +161,10 @@ ActiveRecord::Schema.define(version: 20170523073025) do
     t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope", using: :btree
   end
 
+  add_foreign_key "answers", "styles"
+  add_foreign_key "answers", "users"
   add_foreign_key "choices", "styles"
   add_foreign_key "products", "stores"
   add_foreign_key "reviews", "products"
+  add_foreign_key "styles", "quizzes"
 end

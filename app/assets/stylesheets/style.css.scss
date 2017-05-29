@@ -16,6 +16,15 @@ body,
 .view {
     height: 100%;
 }
+<<<<<<< HEAD
+=======
+.form {
+  padding-top: 100px;
+}
+.login {
+  border: 15px;
+}
+>>>>>>> 7a4a9b08ac3e9b15ac60002cde7b11d18fb42b10
 
 .vote, .down {
   @extend .btn;
@@ -1056,6 +1065,7 @@ ul.multi-column-dropdown li a:hover{
     color: #000;
     font-size: 23px;
     text-align: center;
+<<<<<<< HEAD
 }
 .wed-brand h4{
   font-size:23px;
@@ -1082,6 +1092,34 @@ ul.multi-column-dropdown li a:hover{
   position: relative;
   background: #FDA30E;
 }
+=======
+}
+.wed-brand h4{
+  font-size:23px;
+  text-align:center;
+  color:#000;
+  
+}
+
+.wed-brand {
+    position: absolute;
+    top: 28%;
+    left: 12%;
+}
+/* Outline Out */
+.hvr-outline-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  background: #FDA30E;
+}
+>>>>>>> 7a4a9b08ac3e9b15ac60002cde7b11d18fb42b10
 .hvr-outline-out:before {
   content: '';
   position: absolute;
@@ -1134,10 +1172,17 @@ ul.multi-column-dropdown li a:hover{
     color: #fff;
     text-align: center;
     
+<<<<<<< HEAD
 }
 .new-gd-middle img {
     width: 100%;
 }
+=======
+}
+.new-gd-middle img {
+    width: 100%;
+}
+>>>>>>> 7a4a9b08ac3e9b15ac60002cde7b11d18fb42b10
 .new-levis {
     border: 1px solid #D2D2D2;
     background: #fff;
@@ -1183,4 +1228,8 @@ width:48%;
     font-size: 16px;
     text-align: center;
   margin-bottom:60px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7a4a9b08ac3e9b15ac60002cde7b11d18fb42b10

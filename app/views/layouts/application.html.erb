@@ -14,14 +14,15 @@
   <body>
     <%= render 'partials/header' %><br>
 
-  	<% flash.each do |key, message| %>
-  		<div class="alert alert-<%= key %>">
+    <% flash.each do |key, message| %>
+      <div class="alert alert-<%= key %>">
         <%= message %>
       </div>
-  	<% end %>
+    <% end %>
     <%= yield %>
 
     <%= render 'partials/footer' %>
   </body>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </html>
+

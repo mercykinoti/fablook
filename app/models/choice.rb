@@ -1,7 +1,9 @@
 class Choice < ApplicationRecord
   belongs_to :style
 
-  validates_presence_of :answer
+  has_and_belongs_to_many :answers
+
+  # validates_presence_of :answer
 
   mount_uploader :image, AvatarUploader
 end

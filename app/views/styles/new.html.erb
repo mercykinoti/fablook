@@ -1,0 +1,70 @@
+<div class="container-fluid">
+  <div class="top-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text">
+          <div class="description">
+            <div class="row">
+              <div class="col-md-4">
+                <p>Take the quiz to find the perfect shapes and styles for you</p>
+              </div>
+              <div class="col-md-4">
+                <p>Tell us what like and dislike to keep your edits up to date</p>
+              </div>
+              <div class="col-md-4">
+                <p>Check your wardrobe and inbox for edits tailored to you</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <fieldset class="row">
+        <div class="col-sm-12 form-box">
+          <%= form_tag styles_create_path, method: 'post' do %>
+              <div class="f1-steps">
+                <div class="f1-progress">
+                  <div class="f1-progress-line" data-now-value="16.66%" data-number-of-steps="3" style="width: 16.66%;"></div>
+                </div>
+                <div class="f1-step active">
+                  <div class="f1-step-icon"><i class="fa fa-user"></i></div>
+                  <p>Inspiration</p>
+                </div>
+                <div class="f1-step">
+                  <div class="f1-step-icon"><i class="fa fa-key"></i></div>
+                  <p>My style</p>
+                </div>
+                <div class="f1-step">
+                  <div class="f1-step-icon"><i class="fa fa-twitter"></i></div>
+                  <p>Account</p>
+                </div>
+              </div>
+              <hr>
+              <% @quiz.styles.each_with_index do |question, index, group| %>
+                <div class="form-group">
+                  <p><%= "#{index + 1}. #{question.question}" %></p>
+                  <div class="row">
+                    <% question.choices.each do |choice| %>
+                        <div class="col-md-4">
+                          <input type="checkbox"
+                                 name="<%= "quiz[#{question.id}[choice_ids]][]" %>"
+                                 value="<%= choice.id %>"
+                                 id="<%= choice.id %>">
+                          <%= image_tag choice.image_url(:thumbnail) %>
+                          <label for="<%= choice.id %>"><% choice.label %></label>
+                          <br>
+                          <br>
+                        </div>
+                    <% end %>
+                  </div>
+                </div>
+              <% end %>
+              <button type="submit" >Create Style</button>
+          <% end %>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+</div>
+
+
+
