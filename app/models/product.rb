@@ -1,6 +1,4 @@
 class Product < ApplicationRecord
-  # include PgSearch
-  # multisearchable :against => [:name, :description, :price]
 
   include PgSearch
   pg_search_scope :search_by_tags, :against => [:tags, :name],
@@ -9,6 +7,8 @@ class Product < ApplicationRecord
                           any_word: true
                       }
                   }
+
+   multisearchable :against => [:name, :description, :price]
 
   acts_as_votable
 
