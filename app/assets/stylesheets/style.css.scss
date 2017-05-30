@@ -35,6 +35,9 @@ body,
 .coupons a {
   color: #fff; 
 }
+.col-md-6.verticalline {
+  border-left: thick solid #f0ad4e;
+}
 
 html, body{
   font-family: 'Helvetica', sans-serif;
@@ -108,6 +111,10 @@ label{
 
 .card {
   padding-bottom: 20px;
+}
+.card-img-top.img-size {
+  min-height: 300px;
+  max-height: 300px;
 }
 
 /* Add some padding inside the card container */

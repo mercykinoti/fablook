@@ -35,14 +35,13 @@
        <% group.each do |product| %>
       <div class="row">       
         <div class="col-md-3">
-        <div class="card" style="width: 20rem; ">
-    <%= image_tag product.image_url(:thumbnail) %>
-  <div class="card-block">
-    <p><a ><%= product.name %> </a></p>
-     <p class="item_price">$<%= product.price %></p>
-     <%= link_to 'View Details', product_path(product) , class: "item_add single-item hvr-outline-out button2" %>     
-  </div>
-</div>       
+        <div class="card demo-card" style="width: 20rem; ">
+        <%= image_tag product.image_url(:thumbnail), class: "card-img-top img-size" %>
+        <div class="card-block">
+         <p><a ><%= product.name %> </a></p>
+         <p class="item_price">$<%= product.price %></p>
+         <%= link_to 'View Details', product_path(product) , class: "btn btn-default" %></div>
+      </div>       
         </div>
 
       <% end %>
@@ -54,3 +53,4 @@
     
   </div>
 </div>
+<hr>
