@@ -5,7 +5,7 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 @import "social-share-button";
-
+@import "bootstrap";
 html,
 body,
 .form-background {
@@ -20,6 +20,13 @@ body,
 .login {
   border: 15px;
 }
+.navbar-default.nav-color {
+  background-color: #FDA30E;
+}
+.slider {
+  padding-top: -20px;
+}
+
 
 .search {
   padding-top: 20px;
@@ -35,17 +42,8 @@ html, body{
   font-size: 20px;
   background: #fff;
 }
-body a {
-  text-decoration:none;
-  transition:0.5s all;
-  -webkit-transition:0.5s all;
-  -moz-transition:0.5s all;
-  -o-transition:0.5s all;
-  -ms-transition:0.5s all;
-}
-a:hover{
- text-decoration:none;
-}
+
+
 input[type="button"],input[type="submit"]{
   transition:0.5s all;
   -webkit-transition:0.5s all;
@@ -80,7 +78,7 @@ label{
 }
 .footer p {
   padding-top: 20px;
-  color: #333;
+  color: #fda30e;
 
 }
 .coupons {
@@ -139,7 +137,7 @@ label{
 }
 /* Icons */
 .footer {
-  background-color: #e7e7e7;
+  background-color: #fff;
 }
 .footer-bottom a {
 
@@ -162,23 +160,16 @@ label{
     margin: 0;
     float: left;
 }
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    background: none;
-}
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-    color: #333;
-    background: none;
-}
-.navbar-nav > li {
-    margin: 0 15px 0 0;
-}
-.navbar-nav > li > a {
-    padding: 26px 16px;
-}
+
+
 .navbar-collapse {
     padding-right: 0;
     padding-left: 0;
 }
+.link-color li {
+  color: #333;
+}
+
 .navbar-nav > li > a {
     line-height: inherit;
     font-size: 21px;
@@ -199,9 +190,10 @@ label{
   list-style: none;
 }
 
-.menu__item {
+.menu__item a{
   display: block;
   margin: 0em 0;
+  color: #333;
 }
 
 
