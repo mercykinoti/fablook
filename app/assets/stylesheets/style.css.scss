@@ -112,13 +112,20 @@ copy-right {
     height: auto;
   
 }
-
+.extend h6 {
+  color: #fff;
+  font-size: 16px;
+}
 .card {
   padding-bottom: 20px;
 }
 .card-img-top.img-size {
   min-height: 300px;
   max-height: 300px;
+}
+.name {
+  min-height: 100px;
+  max-height: 100px;
 }
 
 /* Add some padding inside the card container */

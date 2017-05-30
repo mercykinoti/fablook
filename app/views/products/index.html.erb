@@ -41,7 +41,7 @@
         <div class="card demo-card" style="width: 20rem; ">
         <%= image_tag product.image_url(:thumbnail), class: "card-img-top img-size" %>
         <div class="card-block">
-         <p><a ><%= product.name %> </a></p>
+         <p class="name"><a ><%= product.name %> </a></p>
          <p class="item_price">$<%= product.price %></p>
          <%= link_to 'View Details', product_path(product) , class: "btn btn-default" %></div>
       </div>       
