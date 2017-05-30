@@ -13,6 +13,7 @@ class ProductsController < ApplicationController
 		else
 			@products = Product.order("created_at DESC")
 		end
+		@pg_search_documents = PgSearch.multisearch(params[:search])
 		# if params[:search]
 		# 	@products = PgSearch.multisearch(params[:search])
 		# elsif params[:category_id]

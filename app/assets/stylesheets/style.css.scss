@@ -1,8 +1,6 @@
 
 @import "social-share-button";
 @import "bootstrap";
-@import "font-awesome";
-
 html,
 body,
 .form-background {
@@ -18,37 +16,19 @@ body,
   border: 15px;
 }
 .navbar-default.nav-color {
-  background-color: #f0ad4e;
+  background-color: #333;
 }
 .navbar-default.link-color>li>a {
-  color: #eee;  
+  color: #fff;  
 }
 .slider {
   padding-top: -20px;
 }
 
-.vote, .down {
-  @extend .btn;
-  @extend .btn-primary;
-}
+
 .search {
   padding-top: 20px;
 }
-.vote {
-
-  &:before {
-    @extend .fa-thumbs-up;
-
-  }
-}
-.vote {
-
-  &:before {
-    @extend .fa-thumbs-down;
-
-  }
-}
-
 
 .coupons a {
   color: #fff; 
@@ -56,7 +36,9 @@ body,
 .col-md-6.verticalline {
   border-left: thick solid #f0ad4e;
 }
-
+body a {
+  color:#FDA30E;
+}
 html, body{
   font-family: 'Helvetica', sans-serif;
   margin:0;
@@ -80,8 +62,8 @@ h1,h2,h3,h4,h5,h6{
 } 
 p{
   margin:0;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 18px;
 }
 ul{
   margin:0;
@@ -101,6 +83,10 @@ label{
   padding-top: 20px;
   color: #fda30e;
 
+}
+copy-right {
+  color: #fff;
+  font-size: 18px;
 }
 .coupons {
   
@@ -162,13 +148,13 @@ label{
 }
 /* Icons */
 .footer {
-  background-color: #fff;
+  background-color: #333;
 }
 .footer-bottom a {
 
 }
 .footer li a {
-  color: #333}
+  color: #fff}
 
 .dropdown-menu.columns-3 {
     min-width: 700px;
@@ -192,7 +178,7 @@ label{
     padding-left: 0;
 }
 .link-color li {
-  color: #333;
+  color: #fff;
 }
 
 .navbar-nav > li > a {
@@ -218,7 +204,7 @@ label{
 .menu__item a{
   display: block;
   margin: 0em 0;
-  color: #333;
+  color: #fff;
   font-size: 21px;
   text-align: center;
 }

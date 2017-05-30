@@ -1,11 +1,12 @@
 class StoresController < ApplicationController
 	def index
-		@stores = Store.all
+			@stores = Store.all
 	end
 
 	def show
 		@store = Store.find(params[:id])
 	end
+
 	def new
 		@store = Store.new
 	end
@@ -15,12 +16,14 @@ class StoresController < ApplicationController
 		if @store.save
 			redirect_to @store
 		else
-			render "new"
+			render 'new'
 		end
 	end
+
 	def edit
 		@store = Store.find(params[:id])
 	end
+
 	def update
 		@store = Store.find(params[:id])
 

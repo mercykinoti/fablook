@@ -1,0 +1,10 @@
+<div class="container">
+  <% @results.each do |pg_search| %>
+      <% if pg_search.searchable.respond_to?(:name) %>
+          <%= pg_search.searchable.name %>
+      <% else %>
+          <%= pg_search.searchable.description %>
+      <% end %>
+  <% end %>
+</div>
+

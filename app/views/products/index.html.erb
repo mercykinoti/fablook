@@ -1,5 +1,6 @@
+<div class="product"></div>
 <div class="container-fluid products">
-  <h1>Categories</h1>
+  
   <p>Shop by category</p>
   <hr>
   <div class="row">
@@ -17,7 +18,7 @@
       <option value="">16-20</option>
       <option value="">21-25</option>
       <option value="">Above 30</option>
-      <option value="" selected>26-30</option>
+      <option value="" selected>$20</option>
     </select> 
     <hr>
     <p>Sorted by</p>
@@ -25,15 +26,17 @@
       <option value="">16-20</option>
       <option value="">21-25</option>
       <option value="">Above 30</option>
-      <option value="" selected>26-30</option>
+      <option value="" selected>Store</option>
     </select>
     <hr>
                    
     </div>
-     <% @products.in_groups_of(4, false) do |group| %>
+    
     <div class="col-md-9">
-       <% group.each do |product| %>
-      <div class="row">       
+     <% @products.in_groups_of(4, false) do |group| %>
+      
+      <div class="row"> 
+       <% group.each do |product| %>      
         <div class="col-md-3">
         <div class="card demo-card" style="width: 20rem; ">
         <%= image_tag product.image_url(:thumbnail), class: "card-img-top img-size" %>
@@ -43,14 +46,18 @@
          <%= link_to 'View Details', product_path(product) , class: "btn btn-default" %></div>
       </div>       
         </div>
+         <% end %>
 
-      <% end %>
+      
 
       </div>
-    <% end %>        
+       <% end %>      
+           
       </div>
+     
     
     
   </div>
+  
 </div>
 <hr>

@@ -16,4 +16,3 @@
 //= require_tree .
 //= require social-share-button
 //= require jquery-ui
-//= require bootstrap

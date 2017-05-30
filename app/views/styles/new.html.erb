@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid question-style">
   <div class="top-content">
     <div class="container">
       <div class="row">
@@ -39,24 +39,34 @@
                 </div>
               </div>
               <hr>
-              <% @quiz.styles.each_with_index do |question, index, group| %>
-                <div class="form-group">
-                  <p><%= "#{index + 1}. #{question.question}" %></p>
-                  <div class="row">
-                    <% question.choices.each do |choice| %>
-                        <div class="col-md-4">
-                          <input type="checkbox"
-                                 name="<%= "quiz[#{question.id}[choice_ids]][]" %>"
-                                 value="<%= choice.id %>"
-                                 id="<%= choice.id %>">
-                          <%= image_tag choice.image_url(:thumbnail) %>
-                          <label for="<%= choice.id %>"><% choice.label %></label>
-                          <br>
-                          <br>
-                        </div>
-                    <% end %>
-                  </div>
-                </div>
+              <% @quiz.styles.each_with_index do |question, index| %>
+                  <fieldset>
+                    <div class="form-group">
+                      <p><%= "#{index + 1}. #{question.question}" %></p><br>
+                      <div class="row">
+                        <% question.choices.in_groups_of(3, false) do |group| %>
+                          <div class="row">
+                            <% group.each do |choice|%>
+                            <div class="col-md-4">
+                              <input type="checkbox"
+                                     name="<%= "quiz[#{question.id}[choice_ids]][]" %>"
+                                     value="<%= choice.id %>"
+                                     id="<%= choice.id %>">
+                              <label for="<%= choice.id %>">
+                                <%= image_tag choice.image_url(:thumbnail), height: 300, width: 300 %>
+                              </label>
+                              <br>
+                              <br>
+                            </div>
+                          <% end %>
+                          </div>
+                        <% end %>
+                      </div>
+                      <div class="f1-buttons">
+                        <button type="button" class="btn btn-next">Next</button>
+                      </div>
+                    </div>
+                  </fieldset>
               <% end %>
               <button type="submit" >Create Style</button>
           <% end %>
@@ -65,6 +75,3 @@
     </div>
   </div>
 </div>
-
-
-
