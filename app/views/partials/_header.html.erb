@@ -77,13 +77,13 @@
 
 				  </ul>
 				  <ul>
-				  	<div class="row search">
 	<div class="col-md-4">
 	</div>
 	<div class="col-md-6">
 		<li>
         <!-- Searchbar -->
-         <%= form_tag root_path, :method => 'get', id: 'search-form' do %>
+
+         <%= form_tag searches_index_path, :method => 'get', id: 'search-form' do %>
             <p>
               <%= text_field_tag :search, params[:search], placeholder: 'Search Style' , class: 'form-control'  %>
 
@@ -91,9 +91,8 @@
         <% end %>
 
 			</li>
-	</div>
-</div>
-				  </ul>
+  </div>
+          </ul>
 				  <ul class="nav navbar-nav menu__list pull-right">
 				  	<li class="menu__item"><a class="" href="https://medium.com/@TessieWaithira">Blog</a></li>
 				  	<li class=" menu__item"><%= link_to 'My Style', styles_new_path, class: "" %></li>

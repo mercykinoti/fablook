@@ -21,3 +21,6 @@
 
 /app/assets/.images/
 app/.DS_Store
+
+/public/uploads/
+
