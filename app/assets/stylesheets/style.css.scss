@@ -129,6 +129,10 @@ label{
 .card {
   padding-bottom: 20px;
 }
+.card-img-top.img-size {
+  min-height: 300px;
+  max-height: 300px;
+}
 
 /* Add some padding inside the card container */
 .card2 {
