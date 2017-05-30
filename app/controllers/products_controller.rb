@@ -1,18 +1,22 @@
 class ProductsController < ApplicationController
+
 	before_action :set_product, only: [:show, :upvote, :downvote]
 
 	def index
 		@tags = ''
+
 		if current_user
 			current_user.answers.each do |answer|
 				answer.choices.each do |choice|
 					@tags = [@tags, choice.tags].join('')
 				end
 			end
+
 			@products = Product.search_by_tags(@tags)
 		else
 			@products = Product.order("created_at DESC")
 		end
+
 		@pg_search_documents = PgSearch.multisearch(params[:search])
 		# if params[:search]
 		# 	@products = PgSearch.multisearch(params[:search])
@@ -30,13 +34,16 @@ class ProductsController < ApplicationController
 	def show
 		@product = Product.find(params[:id])
 	end
+
 	def create
 		@product = Product.new(product_params)
+
 		if @product.save
 			redirect_to @product
 		else
 			render "new"
 		end
+
 	end
 
 	def upvote
@@ -60,4 +67,5 @@ class ProductsController < ApplicationController
 	def product_params
 		params.require(:product).permit(:name, :price, :description, :image, :category)
 	end
+
 end

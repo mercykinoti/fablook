@@ -21,6 +21,7 @@
       <fieldset class="row">
         <div class="col-sm-12 form-box">
           <%= form_tag styles_create_path, method: 'post' do %>
+
               <div class="f1-steps">
                 <div class="f1-progress">
                   <div class="f1-progress-line" data-now-value="16.66%" data-number-of-steps="3" style="width: 16.66%;"></div>
@@ -39,36 +40,41 @@
                 </div>
               </div>
               <hr>
-              <% @quiz.styles.each_with_index do |question, index| %>
+
+              <% @quiz.styles.in_groups_of(2, false) do |group| %>
                   <fieldset>
-                    <div class="form-group">
-                      <p><%= "#{index + 1}. #{question.question}" %></p><br>
-                      <div class="row">
-                        <% question.choices.in_groups_of(3, false) do |group| %>
+                  <% group.each_with_index do |question, index| %>
+                        <div class="form-group">
+                          <p><%= "#{index + 1}. #{question.question}" %></p><br>
+
                           <div class="row">
-                            <% group.each do |choice|%>
-                            <div class="col-md-4">
-                              <input type="checkbox"
-                                     name="<%= "quiz[#{question.id}[choice_ids]][]" %>"
-                                     value="<%= choice.id %>"
-                                     id="<%= choice.id %>">
-                              <label for="<%= choice.id %>">
-                                <%= image_tag choice.image_url(:thumbnail), height: 300, width: 300 %>
-                              </label>
-                              <br>
-                              <br>
-                            </div>
-                          <% end %>
+                            <% question.choices.in_groups_of(3, false) do |group| %>
+                              <div class="row">
+                                <% group.each do |choice|%>
+                                <div class="col-md-4">
+                                  <input type="checkbox"
+                                         name="<%= "quiz[#{question.id}[choice_ids]][]" %>"
+                                         value="<%= choice.id %>"
+                                         id="<%= choice.id %>">
+                                  <label for="<%= choice.id %>">
+                                    <%= image_tag choice.image_url(:thumbnail), height: 300, width: 300 %>
+                                  </label>
+                                  <br>
+                                  <br>
+                                </div>
+                              <% end %>
+                              </div>
+                            <% end %>
                           </div>
-                        <% end %>
-                      </div>
-                      <div class="f1-buttons">
-                        <button type="button" class="btn btn-next">Next</button>
-                      </div>
-                    </div>
+                        </div>
+                <% end %>
+
                   </fieldset>
+                  <div class="f1-buttons">
+                    <button type="button" class="btn btn-next">Next</button>
+                  </div>
               <% end %>
-              <button type="submit" >Create Style</button>
+              <button type="submit" class="btn btn-warning" >Create Style</button>
           <% end %>
         </div>
       </fieldset>
