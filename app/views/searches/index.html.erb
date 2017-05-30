@@ -1,10 +1,30 @@
 <div class="container">
-  <% @results.each do |pg_search| %>
-      <% if pg_search.searchable.respond_to?(:name) %>
-          <%= pg_search.searchable.name %>
-      <% else %>
-          <%= pg_search.searchable.description %>
-      <% end %>
-  <% end %>
+  <% @results.in_groups_of(4, false) do |group| %>
+      <div class="row">
+          <% group.each do |pg_search|%>
+            <div class="col-md-3">
+            <% if pg_search.searchable.respond_to?(:description, :price) %>
+                <div class="card demo-card" style="width: 20rem; ">
+                  <%= image_tag pg_search.searchable.image_url(:thumbnail), class: "card-img-top img-size" %>
+                  <p><%= pg_search.searchable.name %></p>
+                  <p class="item_price">$<%= pg_search.searchable.price %></p>
+                </div>
+              <% elsif pg_search.searchable.respond_to?( :tags)%>
+                  <div class="card demo-card" style="width: 20rem; ">
+                    <%= image_tag pg_search.searchable.image_url(:thumbnail), class: "card-img-top img-size" %>
+                    <p><%= pg_search.searchable.name %></p>
+                    <p class="item_price">$<%= pg_search.searchable.price %></p>
+                  </div>
+            <% else %>
+                  <div class="card demo-card" style="width: 20rem; ">
+                    <%= image_tag pg_search.searchable.logo_url(:thumbnail), class: "card-img-top img-size" %>
+                    <p><%= pg_search.searchable.name %></p>
+                    <p><%= pg_search.searchable.website %></p>
+                  </div>
+            <% end %>
+            </div>
+        <% end %>
+      </div>
+  <% end%>
 </div>
 

@@ -8,7 +8,7 @@ class Product < ApplicationRecord
                       }
                   }
 
-   multisearchable :against => [:name, :description, :price]
+   multisearchable :against => [:name, :description, :price, :tags]
 
   acts_as_votable
 

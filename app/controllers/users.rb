@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
+  layout 'formlayout'
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+
 
       # GET /users/:id.:format
       def show

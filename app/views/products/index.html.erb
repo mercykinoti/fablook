@@ -30,8 +30,9 @@
     <hr>
                    
     </div>
-     <% @products.in_groups_of(4, false) do |group| %>
     <div class="col-md-9">
+     <% @products.in_groups_of(4, false) do |group| %>
+
        <% group.each do |product| %>
       <div class="row">       
         <div class="col-md-3">
@@ -47,10 +48,11 @@
       <% end %>
 
       </div>
-    <% end %>        
-      </div>
-    
+
+    <% end %>
+
+    </div>
     
   </div>
 </div>
-<hr>
+
