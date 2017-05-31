@@ -10,10 +10,10 @@
     <div class="col-md-3">
     <p>Category</p>
         <ul class="list-unstyled">
-          <li><a href="fablook.com">Beauty</a></li>
-          <li><a href="fablook.com">Shoes</a></li>
-          <li><a href="fablook.com">Beauty</a></li>
-          <li><a href="fablook.com">Accessories</a></li>
+          <li><%= link_to 'Clothing', products_path + "?category_id=5" %></li>
+          <li><%= link_to 'Shoes', products_path + "?category_id=6"  %></li>
+          <li><%= link_to 'Beauty', products_path + "?category_id=11" %></li>
+          <li><%= link_to 'Accessories', products_path + "?category_id=9" %></li>
         </ul>
     <hr>     
     <p>Price</p>
