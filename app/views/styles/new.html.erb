@@ -46,10 +46,10 @@
                         <div class="form-group">
                           <p><%= "#{index + 1}. #{question.question}" %></p><br>
                           <div class="row">
-                            <% question.choices.in_groups_of(3, false) do |group| %>
+                            <% question.choices.in_groups_of(6, false) do |group| %>
                               <div class="row">
                                 <% group.each do |choice|%>
-                                <div class="col-md-4">
+                                <div class="col-md-2">
                                   <input type="checkbox"
                                          name="<%= "quiz[#{question.id}[choice_ids]][]" %>"
                                          value="<%= choice.id %>"
