@@ -11,8 +11,10 @@ class ProductsController < ApplicationController
 					@tags = [@tags, choice.tags].join('')
 				end
 			end
-
 			@products = Product.search_by_tags(@tags)
+			if params[:category_id]
+				@products = Category.find_by(id: params[:category_id]).products
+			end
 		else
 			@products = Product.order("created_at DESC")
 
