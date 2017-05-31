@@ -71,15 +71,6 @@ ActiveRecord::Schema.define(version: 20170530191811) do
     t.index ["style_id"], name: "index_choices_on_style_id", using: :btree
   end
 
-  create_table "identities", force: :cascade do |t|
-    t.integer  "user_id"
-    t.string   "provider"
-    t.string   "uid"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_identities_on_user_id", using: :btree
-  end
-
   create_table "pg_search_documents", force: :cascade do |t|
     t.text     "content"
     t.string   "searchable_type"
@@ -115,16 +106,6 @@ ActiveRecord::Schema.define(version: 20170530191811) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_reviews_on_product_id", using: :btree
-  end
-
-  create_table "searches", force: :cascade do |t|
-    t.string   "keywords"
-    t.string   "category"
-    t.decimal  "min_price"
-    t.decimal  "max_price"
-    t.integer  "isbn"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "stores", force: :cascade do |t|
