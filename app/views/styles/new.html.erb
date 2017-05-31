@@ -21,24 +21,6 @@
       <div class="row">
         <div class="col-sm-12 form-box">
           <%= form_tag styles_create_path, method: 'post' do %>
-
-              <div class="f1-steps">
-                <div class="f1-progress">
-                  <div class="f1-progress-line" data-now-value="16.66%" data-number-of-steps="3" style="width: 16.66%;"></div>
-                </div>
-                <div class="f1-step active">
-                  <div class="f1-step-icon"><i class="fa fa-user"></i></div>
-                  <p>Inspiration</p>
-                </div>
-                <div class="f1-step">
-                  <div class="f1-step-icon"><i class="fa fa-key"></i></div>
-                  <p>My style</p>
-                </div>
-                <div class="f1-step">
-                  <div class="f1-step-icon"><i class="fa fa-twitter"></i></div>
-                  <p>Account</p>
-                </div>
-              </div>
               <hr>
 
               <% @quiz.styles.each_with_index do |question, index| %>
@@ -48,10 +30,10 @@
                           <p><%= "#{index + 1}. #{question.question}" %></p><br>
 
                           <div class="row">
-                            <% question.choices.in_groups_of(3, false) do |group| %>
+                            <% question.choices.in_groups_of(6, false) do |group| %>
                               <div class="row">
                                 <% group.each do |choice|%>
-                                <div class="col-md-4">
+                                <div class="col-md-2">
                                   <input type="checkbox"
                                          name="<%= "quiz[#{question.id}[choice_ids]][]" %>"
                                          value="<%= choice.id %>"
