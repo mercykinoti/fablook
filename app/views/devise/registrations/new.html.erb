@@ -1,6 +1,8 @@
-<div class="container-fluid form-background">
+<div class="container-fluid form">
   <div class="container">
-    <h2>Sign up</h2>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h2>Sign up</h2>
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
@@ -16,6 +18,8 @@
       </div>
     <% end %>
 
-    <%= render "devise/shared/links" %>
+    <%= render "devise/shared/links" %>        
+      </div>      
+    </div>
   </div>
 </div>
