@@ -15,6 +15,11 @@ class ProductsController < ApplicationController
 			@products = Product.search_by_tags(@tags)
 		else
 			@products = Product.order("created_at DESC")
+
+			if params[:category_id]
+				@products = Category.find_by(id: params[:category_id]).products
+			end
+
 		end
 
 		@pg_search_documents = PgSearch.multisearch(params[:search])
