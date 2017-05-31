@@ -12,9 +12,9 @@ class ProductsController < ApplicationController
 				end
 			end
 			@products = Product.search_by_tags(@tags)
-			if params[:category_id]
-				@products = Category.find_by(id: params[:category_id]).products
-			end
+			# if params[:category_id]
+			# 	@products = Category.find_by(id: params[:category_id]).products
+			# end
 		else
 			@products = Product.order("created_at DESC")
 
