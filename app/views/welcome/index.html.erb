@@ -1,9 +1,9 @@
 <div class="slider"   >
 	<div class="my-container" >
-	<button type="button" class="btn btn-warn” aria-label="Left Align">
-    <h1><u><%= link_to 'Innovative styles for the creative generation', products_path %><u></h1>
-    <img src="/images/p3.jpg" class="img-responsive img-fluid" id="slider-image">
-	</div>
+    <button type="button" class="btn btn-warn" aria-label="Left Align"></button>
+    <h1><u><%= link_to 'Innovative styles for the creative generation', products_path %></u></h1>
+    <%= image_tag(image_url('https://res.cloudinary.com/dazy8mpa6/image/upload/v1496210359/p3_xk6mdc.jpg') , class: 'img-responsive img-fluid', id: 'slider-image' )%>
+  </div>
 </div>
 
 <script type="text/javascript">
@@ -11,13 +11,14 @@ function slide(){
 	var host = window.location.host;
 	var proto = window.location.protocol;
 	setTimeout(function(){
-		document.getElementById('slider-image').src = proto+"//"+host+"/images/p7.jpg"
-	}, 2000);
+    document.getElementById('slider-image').src = "https://res.cloudinary.com/dazy8mpa6/image/upload/v1496210366/p7_k4xd5h.jpg"
+
+  }, 2000);
 		setTimeout(function(){
-		document.getElementById('slider-image').src = proto+"//"+host+"/images/p2.jpg"
+		    document.getElementById('slider-image').src = "https://res.cloudinary.com/dazy8mpa6/image/upload/v1496210329/p2_t7l5jj.jpg"
 	}, 4000);
 		setTimeout(function(){
-		document.getElementById('slider-image').src = proto+"//"+host+"/images/p3.jpg";
+        document.getElementById('slider-image').src = "https://res.cloudinary.com/dazy8mpa6/image/upload/v1496210359/p3_xk6mdc.jpg"
 		slide();
 	}, 6000);
 }
@@ -66,11 +67,11 @@ slide();
 			<div class="electro-img-rt mask">
 				<div class="content-grid-effect slow-zoom vertical">
 					<div class="img-box">
-						<img src="/images/p5.jpg" class="img-responsive img-fluid img-rounded" id="slider-image">
+            <%= image_tag(image_url('https://res.cloudinary.com/dazy8mpa6/image/upload/v1496210152/p5_shu6ma.jpg'), class: 'img-responsive img-rounded') %>
 					</div>
 						<div class="info-box">
 							<div class="info-content electro-text simpleCart_shelfItem">
-								<h4>Clothes</h4>
+								<h4>Accessories</h4>
 								<span class="separator"></span>
                 <%= link_to 'shop now', products_path + "?category_id=1", class: "item_add hvr-outline-out button2" %>
 							</div>
@@ -82,7 +83,7 @@ slide();
 			<div class="electro-img-rt mask">
 				<div class="content-grid-effect slow-zoom vertical">
 					<div class="img-box">
-						<img src="/images/p7.jpg" class="img-responsive img-fluid img-rounded" id="slider-image">
+            <%= image_tag(image_url('https://res.cloudinary.com/dazy8mpa6/image/upload/v1496210366/p7_k4xd5h.jpg'), class: 'img-responsive img-rounded') %>
 					</div>
 					<br>
 						<div class="info-box">
@@ -99,7 +100,7 @@ slide();
 			<div class="electro-img-rt mask">
 				<div class="content-grid-effect slow-zoom vertical">
 					<div class="img-box">
-						<img src="/images/p8.jpg" class="img-responsive img-fluid img-rounded" id="slider-image">
+            <%= image_tag(image_url('https://res.cloudinary.com/dazy8mpa6/image/upload/v1496211699/p8_jfuyrc.jpg'), class: 'img-responsive img-rounded') %>
 					</div>
 					<br>
 						<div class="info-box">
@@ -116,7 +117,7 @@ slide();
 			<div class="electro-img-rt mask">
 				<div class="content-grid-effect slow-zoom vertical">
 					<div class="img-box">
-						<img src="/images/pic2.jpg" class="img-responsive img-fluid img-rounded" id="slider-image">
+            <%= image_tag(image_url('https://res.cloudinary.com/dazy8mpa6/image/upload/v1496209888/pic2_drzghq.jpg'), class: 'img-responsive img-rounded') %>
 					</div>
 						<div class="info-box">
 							<div class="info-content electro-text simpleCart_shelfItem">
@@ -139,7 +140,7 @@ slide();
 			<div class="col-md-4 new-gd-middle">
 				<div class="new-levis">
 					<div class="mid-img">
-						<img src="/images/p.jpg" class="img-responsive img-fluid" id="slider-image">
+            <%= image_tag(image_url('https://res.cloudinary.com/dazy8mpa6/image/upload/v1496209777/p_dqq6fg.jpg'), class: 'img-responsive img-rounded') %>
 					</div>
 					<div class="mid-text">
 						<h4>up to 40% <span>off</span></h4>
@@ -153,8 +154,7 @@ slide();
 						 <%= link_to 'shop sale', products_path + "?category_id=1", class: "btn btn-warning" %>
 					</div>
 					<div class="mid-img">
-						<img src="/images/ba8.jpg" class="img-responsive img-fluid" id="slider-image">
-				</a>
+            <%= image_tag(image_url('https://res.cloudinary.com/dazy8mpa6/image/upload/v1496212171/ba8_y4gtw8.jpg'), class: 'img-responsive img-rounded') %>>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -178,7 +178,6 @@ slide();
 					</div>
 					<div class="mid-img">
 						<%= image_tag(image_url('https://res.cloudinary.com/dazy8mpa6/image/upload/v1496074689/store66_oes5wg.png') , class: "img-responsive" )%>
-				</a>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -189,7 +188,7 @@ slide();
 			<div class="col-md-4 new-gd-middle">
 				<div class="new-levis">
 					<div class="mid-img">
-						<img src="/images/p.jpg" class="img-responsive img-fluid" id="slider-image">
+            <%= image_tag(image_url('https://res.cloudinary.com/dazy8mpa6/image/upload/v1496209777/p_dqq6fg.jpg'), class: 'img-responsive img-rounded') %>
 					</div>
 					<div class="mid-text">
 						<h4>up to 40% <span>off</span></h4>
@@ -203,8 +202,7 @@ slide();
 						 <%= link_to 'shop sale', products_path + "?category_id=1", class: "btn btn-warning" %>
 					</div>
 					<div class="mid-img">
-						<img src="/images/ba8.jpg" class="img-responsive img-fluid" id="slider-image">
-				</a>
+            <%= image_tag(image_url('https://res.cloudinary.com/dazy8mpa6/image/upload/v1496212171/ba8_y4gtw8.jpg'), class: 'img-responsive img-rounded') %>
 					</div>
 					<div class="clearfix"></div>
 				</div>

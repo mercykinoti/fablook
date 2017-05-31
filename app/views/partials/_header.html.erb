@@ -76,19 +76,18 @@
               		</ul>
 					</li>
 				  </ul>
-				<ul>
-				<
+				<ul class="nav link-color menu__list pull-right">
 				  <div class="col-md-8">
-					<li>
-        			<!-- Searchbar -->
-         			<%= form_tag searches_index_path, :method => 'get', id: 'search-form' do %>
-            		<p>
-              		<%= text_field_tag :search, params[:search], placeholder: 'Search Style' , class: 'form-control'  %>
-           			 </p>
-        			<% end %>
-					</li>
-  					</div>
-          		</ul>
+            <li>
+                <!-- Searchbar -->
+                <%= form_tag searches_index_path, :method => 'get', id: 'search-form' do %>
+                  <p>
+                    <%= text_field_tag :search, params[:search], placeholder: 'Search Style' , class: 'form-control'  %>
+                   </p>
+                <% end %>
+            </li>
+          </div>
+        </ul>
 
 				</div>
 
