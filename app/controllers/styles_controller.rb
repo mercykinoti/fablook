@@ -4,7 +4,7 @@ class StylesController < ApplicationController
 
 
   def new
-    @quiz = Quiz.first
+    @quiz = Quiz.find(3)
   end
 
   def create
